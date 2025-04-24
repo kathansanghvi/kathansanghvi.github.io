@@ -121,61 +121,85 @@
 
 <!-- Project Modals -->
 <!-- Capstone Modal -->
-<div id="capstoneModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-  <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
-    <button onclick="toggleModal('capstoneModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
-    <h3 class="text-2xl font-semibold mb-4">Recirculating Water Bath (Capstone Project)</h3>
+
+<!-- Custom Recirculating Water Bath Modal -->
+<div id="capstoneModal" class="modal hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+  <div class="bg-white rounded-lg p-8 w-full mx-4 max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl transform transition-all hover:scale-102">
+    <button onclick="toggleModal('capstoneModal')" class="absolute top-6 right-8 text-gray-500 hover:text-red-600 text-3xl cursor-pointer">&times;</button>
+    <h2 class="text-3xl font-bold mb-4">Custom Recirculating Water Bath</h2>
     <div class="grid grid-cols-2 gap-4 mb-6">
-    <img src="images/capstone_19_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
-    <img src="images/capstone_7_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
-</div>
-    <h4 class="font-semibold mb-1">Background</h4>
-    <p class="mb-3">Developed for UVic’s thermal engineering labs to support biomedical experiments requiring ±0.1°C precision, replacing costly commercial baths.</p>
-    <h4 class="font-semibold mb-1">Objectives</h4>
-    <p class="mb-3">Build a self-contained water bath with stainless steel tank, PI-controlled heating, and internal recirculation to maintain ±0.1°C accuracy from ambient to 95°C.</p>
-    <h4 class="font-semibold mb-1">Design & Engineering Approach</h4>
-    <p class="mb-3">CAD and CFD in Siemens NX refined inlet/outlet geometry for uniform flow. Custom Arduino-based PI control tuned to ±0.05°C. Stainless steel fabrication with TIG welding.</p>
-    <h4 class="font-semibold mb-1">Challenges</h4>
-    <p class="mb-3">Preventing thermal stratification, tuning PI controller to avoid wind-up, and ensuring weld integrity with effective insulation.</p>
-    <h4 class="font-semibold mb-1">Results</h4>
-    <p class="mb-3">Achieved ±0.05°C stability over 1 hour. Validated via IR scans and manual sampling. Awarded Marianne Black Award for Best Design 2025.</p>
+      <img src="capstone_19_1.png" class="w-full h-40 object-cover rounded shadow-lg" alt="Assembled Water Bath">
+      <img src="capstone_7_1.png" class="w-full h-40 object-cover rounded shadow-lg" alt="CFD Flow Field">
+    </div>
+    <p class="mb-4 text-slate-700">I'm incredibly proud to share that our capstone team was awarded the <strong>Marianne Black Award for Best Design</strong> at the 2025 University of Victoria Capstone + Rainhouse Manufacturing Canada Ltd. Engineering Design Showcase!</p>
+    <h3 class="text-2xl font-semibold mt-4 mb-2">Project Overview</h3>
+    <p class="mb-4 text-slate-700">We presented a custom recirculating water bath built for biomedical testing, competing among 20+ teams. Our client, Dr. Sravya Tekumalla and her UVic research team, merge additive manufacturing with advanced metallic materials for biomedical, aerospace, and electronics applications.</p>
+    <h3 class="text-2xl font-semibold mt-4 mb-2">Key Highlights</h3>
+    <ul class="list-disc pl-6 mb-4 text-slate-700">
+      <li>Operates continuously between ambient and 60°C for up to 2 months</li>
+      <li>Holds 16–22 test tubes with a custom stainless steel tray</li>
+      <li>Maintains temperature within ±0.1°C, with CFD-optimized flow patterns</li>
+      <li>Controlled by an Arduino-based PI loop, integrating a 1500W heater and 12V pump</li>
+      <li>Built-in safety: float sensor, over-temperature alert, and easy drainage design</li>
+    </ul>
+    <h3 class="text-2xl font-semibold mt-4 mb-2">Technical Details</h3>
+    <ul class="list-disc pl-6 mb-4 text-slate-700">
+      <li><strong>CFD Analysis:</strong> Siemens NX SST model with 12mm mesh and mesh controls to refine critical regions, eliminating dead zones.</li>
+      <li><strong>Controls & Sensors:</strong> PT100 sensors read via MAX31865, low-pass filtering (α=0.1), and anti-windup PI control achieving ±0.05°C stability.</li>
+      <li><strong>Fabrication:</strong> 80–90% of components cut, bent, and welded in-house (stainless steel tank, aluminum frame, EPDM tubing).</li>
+      <li><strong>Electrical:</strong> Solid-state relay PWM cycles, 15A fuse, user interface with TFT display and button controls.</li>
+    </ul>
+    <h3 class="text-2xl font-semibold mt-4 mb-2">Results</h3>
+    <p class="mb-4 text-slate-700">Validated continuous operation over extended periods with ±0.05°C accuracy (IR imaging and manual probe sampling). Complete P&ID, BOM, and electrical schematic delivered for client use.</p>
   </div>
 </div>
+
 <!-- Test Rig Modal -->
 
 <!-- Heat Transfer Test Rig Modal (LinkedIn-aligned) -->
-<div id="testRigModal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+
+<!-- Heat Transfer Test Rig Modal -->
+<div id="testRigModal" class="modal hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
   <div class="bg-white rounded-lg p-8 w-full mx-4 max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl transform transition-all hover:scale-102">
-    <button onclick="toggleModal('testRigModal')" class="absolute top-6 right-8 text-gray-500 hover:text-red-600 text-3xl">&times;</button>
+    <button onclick="toggleModal('testRigModal')" class="absolute top-6 right-8 text-gray-500 hover:text-red-600 text-3xl cursor-pointer">&times;</button>
     <h2 class="text-3xl font-bold mb-4">Heat Transfer Test Rig</h2>
-    <p class="mb-4 text-slate-700">Last week, my team and I presented our Design of Thermofluids project at UVic! We designed a test rig for Accent Refrigeration Systems Ltd to evaluate the heat transfer performance of submerged copper coil heat exchangers used for melting arena ice shavings.</p>
+    <div class="grid grid-cols-2 gap-4 mb-6">
+      <img src="test_rig_1_1.jpeg" class="w-full h-40 object-cover rounded shadow-lg" alt="Test Rig P&ID">
+      <img src="test_rig_5_1.jpeg" class="w-full h-40 object-cover rounded shadow-lg" alt="Isometric CAD">
+    </div>
+    <p class="mb-4 text-slate-700">We presented our Design of Thermofluids project at UVic: a test rig for Accent Refrigeration Systems Ltd to evaluate heat transfer performance of submerged copper coil exchangers used for melting ice shavings in arena snow pits.</p>
     <h3 class="text-2xl font-semibold mt-4 mb-2">Final Design</h3>
     <ul class="list-disc pl-6 mb-4 text-slate-700">
       <li>1 HP circulation pump and 40 kW immersion heater</li>
-      <li>Heated propylene glycol loop connected to submerged copper coils (1&quot; CTS Type K, OD 1.125&quot;, ID 0.995&quot;)</li>
-      <li>Fully instrumented for real-time monitoring: flowmeter, pressure transducers, and RTDs</li>
-      <li>Complete engineering documentation: P&ID, one-line electrical schematic, CAD drawings</li>
-      <li>Pump and agitator sized based on Reynolds number (Re=1400–2800) to ensure turbulent mixing</li>
-      <li>Environmental and structural guidelines for reproducible testing in lab conditions</li>
+      <li>Heated propylene glycol loop through 1" CTS Type K copper coils (OD 1.125", ID 0.995") at 5–10 GPM</li>
+      <li>Fully instrumented: RTDs, flow meter, pressure transducers, and agitator for uniform mixing</li>
+      <li>Comprehensive documentation: P&ID, one-line electrical schematic, detailed CAD drawings</li>
+      <li>Pump and agitator sized based on Reynolds number (Re 1400–2800) to ensure turbulent regime</li>
+      <li>Environmental and structural setup guidelines for repeatable testing</li>
     </ul>
     <h3 class="text-2xl font-semibold mt-4 mb-2">Technical Details</h3>
-    <p class="mb-4 text-slate-700"><strong>Thermodynamics:</strong> LMTD method for coil heat transfer, validated within ±5% of theoretical values.</p>
-    <p class="mb-4 text-slate-700"><strong>Fluid Mechanics:</strong> Pump head calculations (14.8 m), EPDM tubing selection per Darcy-Weisbach analysis.</p>
-    <p class="mb-4 text-slate-700"><strong>Controls & Data Acquisition:</strong> DAQ-ready layout, voltage/current monitoring of heater, and agitator sequencing to prevent stratification.</p>
+    <ul class="list-disc pl-6 mb-4 text-slate-700">
+      <li><strong>Heat Transfer:</strong> LMTD calculations validated within ±5% of theoretical values across flow rates.</li>
+      <li><strong>Fluid Mechanics:</strong> Darcy–Weisbach head loss analysis (pump head ~14.8 m) guiding 1" tubing selection.</li>
+      <li><strong>Control & DAQ:</strong> DAQ-ready interface logging temperature, pressure, and flow; heater power monitored via inline CT.</li>
+    </ul>
+    <h3 class="text-2xl font-semibold mt-4 mb-2">Results</h3>
+    <p class="mb-4 text-slate-700">Delivered a validated test rig with repeatable performance metrics. Data-driven insights now guide Accent Refrigeration coil optimizations.</p>
   </div>
 </div>
 
+
 <!-- VTOL Modal -->
-<div id="vtolModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+<div id="vtolModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
   <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
     <button onclick="toggleModal('vtolModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
     <h3 class="text-2xl font-semibold mb-4">Hybrid Tilt-Wing VTOL Aircraft</h3>
     <div class="grid grid-cols-2 gap-4 mb-6">
     <div class="grid grid-cols-2 gap-4 mb-6">
-    <img src="images/vtol_1_1.jpeg" alt="" class="w-full h-40 object-cover rounded shadow-lg">
-    <img src="images/vtol_15_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+    <img src="vtol_1_1.jpeg" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+    <img src="vtol_15_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
 </div>
-    <img src="images/test_rig_5_1.jpeg" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+    <img src="test_rig_5_1.jpeg" alt="" class="w-full h-40 object-cover rounded shadow-lg">
 </div>
     <h4 class="font-semibold mb-1">Background</h4>
     <p class="mb-3">Concept for BC Wildfire Service, enabling runway-independent transport of crews to remote wildfire zones.</p>
@@ -190,13 +214,13 @@
   </div>
 </div>
 <!-- Bike Frame Modal -->
-<div id="bikeFrameModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+<div id="bikeFrameModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
   <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
     <button onclick="toggleModal('bikeFrameModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
     <h3 class="text-2xl font-semibold mb-4">CFD/FEA Road Bike Frame</h3>
     <div class="grid grid-cols-2 gap-4 mb-6">
-    <img src="images/bike_frame_1_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
-    <img src="images/bike_frame_7_1.jpeg" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+    <img src="bike_frame_1_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+    <img src="bike_frame_7_1.jpeg" alt="" class="w-full h-40 object-cover rounded shadow-lg">
 </div>
     <h4 class="font-semibold mb-1">Background</h4>
     <p class="mb-3">Optimized a road bike frame for competitive cycling, targeting aerodynamic improvement without losing structural integrity.</p>
@@ -211,13 +235,13 @@
   </div>
 </div>
 <!-- HVAC Modal -->
-<div id="hvacModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+<div id="hvacModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
   <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
     <button onclick="toggleModal('hvacModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
     <h3 class="text-2xl font-semibold mb-4">Geothermal HVAC Modeling</h3>
     <div class="grid grid-cols-2 gap-4 mb-6">
-    <img src="images/hvac_5_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
-    <img src="images/hvac_15_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+    <img src="hvac_5_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+    <img src="hvac_15_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
 </div>
     <h4 class="font-semibold mb-1">Background</h4>
     <p class="mb-3">Modeled HVAC for a grocery site on geothermal district heating to reduce energy use and carbon footprint.</p>
@@ -232,13 +256,13 @@
   </div>
 </div>
 <!-- Mold Modal -->
-<div id="moldModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+<div id="moldModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
   <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
     <button onclick="toggleModal('moldModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
     <h3 class="text-2xl font-semibold mb-4">CNC Mold Design</h3>
     <div class="grid grid-cols-2 gap-4 mb-6">
-    <img src="images/mold_design_4_1.jpeg" alt="" class="w-full h-40 object-cover rounded shadow-lg">
-    <img src="images/mold_design_7_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+    <img src="mold_design_4_1.jpeg" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+    <img src="mold_design_7_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
 </div>
     <h4 class="font-semibold mb-1">Background</h4>
     <p class="mb-3">CNC-machined HDPE mold for bicycle pedal in a manufacturing course, evaluating toolpath impacts on finish and time.</p>
@@ -253,13 +277,13 @@
   </div>
 </div>
 <!-- Pipeline Modal -->
-<div id="pipelineModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+<div id="pipelineModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
   <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
     <button onclick="toggleModal('pipelineModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
     <h3 class="text-2xl font-semibold mb-4">CO₂ Pipeline Analysis</h3>
     <div class="grid grid-cols-2 gap-4 mb-6">
-    <img src="images/co2_pipeline_1_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
-    <img src="images/co2_pipeline_9_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+    <img src="co2_pipeline_1_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+    <img src="co2_pipeline_9_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
 </div>
     <h4 class="font-semibold mb-1">Background</h4>
     <p class="mb-3">Techno-economic modeling for long-haul CO₂ transport from capture sites to sequestration, assessing costs and exergy losses.</p>
@@ -273,6 +297,30 @@
     <p class="mb-3">Proposed cost-effective design with >90% exergy retention and positive economic metrics for 30-year operation.</p>
   </div>
 </div>
+
+
+<script>
+// Toggle modal visibility
+function toggleModal(id) {
+  document.getElementById(id).classList.toggle("hidden");
+}
+
+// Close modal on backdrop click
+document.querySelectorAll('.modal').forEach(modal => {
+  modal.addEventListener('click', event => {
+    if (event.target === modal) {
+      modal.classList.add('hidden');
+    }
+  });
+});
+
+// Close on ESC key
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    document.querySelectorAll('.modal').forEach(m => m.classList.add('hidden'));
+  }
+});
+</script>
 
 </body>
 </html>
