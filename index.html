@@ -2,6 +2,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<style>
+  /* Subtle engineering silhouettes background */
+  body {{
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" opacity="0.05"><circle cx="100" cy="100" r="80" stroke="navy" stroke-width="5" fill="none" /></svg>'), linear-gradient(to bottom right, #f0f0f0, #ffffff);
+    background-repeat: repeat, no-repeat;
+    background-size: 200px 200px, cover;
+  }}
+</style>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kathan Sanghvi | Mechanical Engineering Portfolio</title>
@@ -9,6 +19,11 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html, body {
+    background-color: #f0faf4;
+    background-image:
+      radial-gradient(circle at 15% 15%, rgba(34, 92, 65, 0.15) 15%, transparent 16%),
+      radial-gradient(circle at 85% 85%, rgba(34, 92, 65, 0.10) 20%, transparent 21%);
+
       margin: 0;
       padding: 0;
       background-color: #f9fafb;
@@ -29,19 +44,19 @@
     }
   </style>
 </head>
-<body>
+<body class="bg-gradient-to-r from-gray-100 to-white">
 
   <header
-  <header class="bg-slate-900 shadow sticky top-0 z-50">
+  <header class="bg-white shadow-sm sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
       <div>
-        <h1 class="text-4xl font-bold text-white">Kathan Sanghvi</h1>
+        <h1 class="text-4xl font-bold text-slate-800">Kathan Sanghvi</h1>
         <p class="text-lg text-slate-600">B.Eng Mechanical Engineering, University of Victoria</p>
         <p class="text-sm text-slate-500">Specializations: Energy Systems, Thermo-fluids, Aerodynamics</p>
       </div>
       <div class="text-right">
-        <p class="text-sm text-indigo-300 mb-1">kathansanghvi5@gmail.com</p>
-        <a href="Resume - Kathan Sanghvi - 2025 - C.pdf" download class="bg-indigo-600 text-white px-4 py-2 rounded shadow hover:bg-indigo-500 transition">Download Resume</a>
+        <p class="text-sm text-slate-500 mb-1">kathansanghvi5@gmail.com</p>
+        <a href="Resume - Kathan Sanghvi - 2025 - C.pdf" download class="bg-blue-600 text-slate-800 px-4 py-2 rounded shadow hover:bg-blue-700 transition">Download Resume</a>
       </div>
     </div>
   </header>
@@ -49,62 +64,65 @@
 
   <main class="max-w-6xl mx-auto px-6 fade-in">
 
-    <section class="py-12 bg-slate-50">
+    <section class="py-12 bg-white rounded-xl shadow-md mx-auto my-8 max-w-4xl px-6">
       <h2 class="text-4xl font-bold mb-4">About Me</h2>
       <p class="text-lg text-slate-600 max-w-3xl">I’m a soon-to-be Mechanical Engineering graduate from the University of Victoria, specializing in energy systems, thermo-fluids, and aerodynamic design. My work bridges technical analysis and hands-on fabrication—from CFD and FEA simulation to HVAC energy modeling, controls design, and CNC machining. I take pride in building systems that are efficient, validated, and field-ready.</p>
-    </section>
+        </div>
+</section>
 
-    <section class="py-12 bg-white">
+    <section class="py-12 bg-white rounded-xl shadow-md mx-auto my-8 max-w-4xl px-6">
       <h2 class="text-3xl font-bold mb-6">Awards</h2>
       <ul class="text-lg space-y-2 list-disc pl-6 text-slate-700">
-        <li><a href="#capstoneModal" onclick="toggleModal('capstoneModal')" class="text-indigo-600 hover:underline">Marianne Black Award for Best Design – UVic Capstone 2025</a></li>
+        <li><a href="#capstoneModal" onclick="toggleModal('capstoneModal')" class="text-blue-600 hover:underline">Marianne Black Award for Best Design – UVic Capstone 2025</a></li>
         <li>International IB Scholarship</li>
         <li>President’s Beyond Borders Fund</li>
       </ul>
-    </section>
+        </div>
+</section>
 
-    <section class="py-12 bg-slate-50">
+    <section class="py-12 bg-white rounded-xl shadow-md mx-auto my-8 max-w-4xl px-6">
       <h2 class="text-3xl font-bold mb-6">Featured Projects</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         
-<div class="bg-white rounded-lg shadow-lg ring-1 ring-slate-200 hover:ring-slate-300 transition p-4 transition-transform transform hover:-translate-y-1 hover:shadow-xl">
+<div class="bg-white rounded-lg shadow-lg shadow-lg p-4 transition-transform transform hover:-translate-y-1 hover:shadow-xl">
   <img src="capstone.jpg" class="rounded mb-3 w-full h-40 object-cover" alt="Capstone">
   <h3 class="text-xl font-semibold mb-2">Recirculating Water Bath</h3>
-  <button onclick="toggleModal('capstoneModal')" class="text-indigo-600 hover:underline">View Details</button>
+  <button onclick="toggleModal('capstoneModal')" class="text-blue-600 hover:underline">View Details</button>
 </div>
-<div class="bg-white rounded-lg shadow-lg ring-1 ring-slate-200 hover:ring-slate-300 transition p-4 transition-transform transform hover:-translate-y-1 hover:shadow-xl">
+<div class="bg-white rounded-lg shadow-lg shadow-lg p-4 transition-transform transform hover:-translate-y-1 hover:shadow-xl">
   <img src="test_rig.jpg" class="rounded mb-3 w-full h-40 object-cover" alt="Test Rig">
   <h3 class="text-xl font-semibold mb-2">Heat Transfer Test Rig</h3>
-  <button onclick="toggleModal('testRigModal')" class="text-indigo-600 hover:underline">View Details</button>
+  <button onclick="toggleModal('testRigModal')" class="text-blue-600 hover:underline">View Details</button>
 </div>
-<div class="bg-white rounded-lg shadow-lg ring-1 ring-slate-200 hover:ring-slate-300 transition p-4 transition-transform transform hover:-translate-y-1 hover:shadow-xl">
+<div class="bg-white rounded-lg shadow-lg shadow-lg p-4 transition-transform transform hover:-translate-y-1 hover:shadow-xl">
   <img src="vtol.jpg" class="rounded mb-3 w-full h-40 object-cover" alt="VTOL">
   <h3 class="text-xl font-semibold mb-2">Tilt-Wing VTOL Aircraft</h3>
-  <button onclick="toggleModal('vtolModal')" class="text-indigo-600 hover:underline">View Details</button>
+  <button onclick="toggleModal('vtolModal')" class="text-blue-600 hover:underline">View Details</button>
 </div>
-<div class="bg-white rounded-lg shadow-lg ring-1 ring-slate-200 hover:ring-slate-300 transition p-4 transition-transform transform hover:-translate-y-1 hover:shadow-xl">
+<div class="bg-white rounded-lg shadow-lg shadow-lg p-4 transition-transform transform hover:-translate-y-1 hover:shadow-xl">
   <img src="bike_frame.jpg" class="rounded mb-3 w-full h-40 object-cover" alt="Bike Frame">
   <h3 class="text-xl font-semibold mb-2">CFD/FEA Road Bike Frame</h3>
-  <button onclick="toggleModal('bikeFrameModal')" class="text-indigo-600 hover:underline">View Details</button>
+  <button onclick="toggleModal('bikeFrameModal')" class="text-blue-600 hover:underline">View Details</button>
 </div>
-<div class="bg-white rounded-lg shadow-lg ring-1 ring-slate-200 hover:ring-slate-300 transition p-4 transition-transform transform hover:-translate-y-1 hover:shadow-xl">
+<div class="bg-white rounded-lg shadow-lg shadow-lg p-4 transition-transform transform hover:-translate-y-1 hover:shadow-xl">
   <img src="hvac.jpg" class="rounded mb-3 w-full h-40 object-cover" alt="HVAC">
   <h3 class="text-xl font-semibold mb-2">Geothermal HVAC Modeling</h3>
-  <button onclick="toggleModal('hvacModal')" class="text-indigo-600 hover:underline">View Details</button>
+  <button onclick="toggleModal('hvacModal')" class="text-blue-600 hover:underline">View Details</button>
 </div>
-<div class="bg-white rounded-lg shadow-lg ring-1 ring-slate-200 hover:ring-slate-300 transition p-4 transition-transform transform hover:-translate-y-1 hover:shadow-xl">
+<div class="bg-white rounded-lg shadow-lg shadow-lg p-4 transition-transform transform hover:-translate-y-1 hover:shadow-xl">
   <img src="mold.jpg" class="rounded mb-3 w-full h-40 object-cover" alt="Mold Design">
   <h3 class="text-xl font-semibold mb-2">CNC Mold Design</h3>
-  <button onclick="toggleModal('moldModal')" class="text-indigo-600 hover:underline">View Details</button>
+  <button onclick="toggleModal('moldModal')" class="text-blue-600 hover:underline">View Details</button>
 </div>
-<div class="bg-white rounded-lg shadow-lg ring-1 ring-slate-200 hover:ring-slate-300 transition p-4 transition-transform transform hover:-translate-y-1 hover:shadow-xl">
+<div class="bg-white rounded-lg shadow-lg shadow-lg p-4 transition-transform transform hover:-translate-y-1 hover:shadow-xl">
   <img src="co2_pipeline.jpg" class="rounded mb-3 w-full h-40 object-cover" alt="CO2 Pipeline">
   <h3 class="text-xl font-semibold mb-2">CO₂ Pipeline Analysis</h3>
-  <button onclick="toggleModal('pipelineModal')" class="text-indigo-600 hover:underline">View Details</button>
+  <button onclick="toggleModal('pipelineModal')" class="text-blue-600 hover:underline">View Details</button>
 </div>
 
       </div>
-    </section>
+        </div>
+</section>
 
   </main>
 
