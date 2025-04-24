@@ -1,121 +1,148 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
-  <title>Kathan Sanghvi | Mechanical Engineer Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kathan Sanghvi | Mechanical Engineering Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f4f8;
-      color: #1f2937;
-    }
-    header {
-      background-color: #1e40af;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #ffffff;
-      margin-bottom: 10px;
-    }
-    header h1 {
-      margin: 10px 0 0;
-      font-size: 2.8rem;
-    }
-    header p {
-      margin: 5px 0;
-      font-size: 1rem;
-    }
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    .project {
-      background: white;
-      margin-bottom: 20px;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-      transition: 0.3s ease;
-    }
-    .project h3 {
-      cursor: pointer;
-      color: #2563eb;
-    }
-    .project-content {
-      display: none;
-      margin-top: 10px;
-      color: #374151;
-    }
-    .project-content p {
-      margin: 5px 0;
-    }
-    footer {
-      background: #1e40af;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      margin-top: 40px;
-    }
-    a {
-      color: #facc15;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    function toggleContent(id) {
-      const content = document.getElementById(id);
-      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
+    }
+    function toggleModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.toggle("hidden");
     }
   </script>
+  <style>
+    html[data-theme='dark'] {
+      --bg: #0f172a;
+      --fg: #f1f5f9;
+      --accent: #38bdf8;
+    }
+    html[data-theme='light'] {
+      --bg: #ffffff;
+      --fg: #1e293b;
+      --accent: #2563eb;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    a { color: var(--accent); }
+    .modal-bg { background: rgba(0, 0, 0, 0.5); }
+  </style>
 </head>
-<body>
-
-  <header>
-    <img src="profile-placeholder.jpg" alt="Profile Photo">
-    <h1>Kathan Sanghvi</h1>
-    <p>Mechanical Engineer | Energy Systems | Thermo-fluids | CAD & Simulation</p>
-    <p><a href="Resume - Kathan Sanghvi - 2025 - C.pdf" download>Download Resume</a> | 
-       <a href="mailto:kathansanghvi5@gmail.com">Email</a> | 
-       <a href="https://linkedin.com/in/kathansanghvi">LinkedIn</a></p>
+<body class="min-h-screen">
+  <header class="text-center p-8">
+    <h1 class="text-4xl font-bold">Kathan Sanghvi</h1>
+    <p class="text-xl mt-2">Mechanical Engineer | Thermo-Fluids | CAD & Simulation</p>
+    <div class="mt-4">
+      <button onclick="toggleTheme()" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded">Toggle Theme</button>
+      <a href="Resume - Kathan Sanghvi - 2025 - C.pdf" download class="ml-4 underline">Download Resume</a>
+    </div>
   </header>
 
-  <section>
-    <h2>Engineering Projects</h2>
-
-    <div class="project"><h3 onclick="toggleContent('p1')">Recirculating Water Bath (Capstone)</h3><div class="project-content" id="p1"><p>Developed a precision water bath for biomedical testing with ±0.1°C tolerance. Used CFD to ensure thermal uniformity and fabricated 80–90% of parts in-house using stainless steel, plumbing, and control components. Integrated PI control and refined inlet/outlet geometry through simulation.</p></div></div>
-
-    <div class="project"><h3 onclick="toggleContent('p2')">Mold Design & Manufacturing</h3><div class="project-content" id="p2"><p>Designed and machined a pedal mold using 3-axis CNC, optimizing spindle speed, toolpath, and feed rates via Mastercam and Vericut. Focused on manufacturability, surface quality, and geometry complexity.</p></div></div>
-
-    <div class="project"><h3 onclick="toggleContent('p3')">CFD/FEA Bike Frame Optimization</h3><div class="project-content" id="p3"><p>Optimized a road bike frame through iterative CFD analysis, reducing aerodynamic drag by 30%. Applied FEA throughout to validate strength and stiffness under dynamic cycling loads.</p></div></div>
-
-    <div class="project"><h3 onclick="toggleContent('p4')">Cost Analysis of CO₂ Pipelines</h3><div class="project-content" id="p4"><p>Conducted thermodynamic and economic analyses of post-capture CO₂ pipelines. Merged exergy efficiency insights with techno-economic cost evaluations for pipeline design and integration.</p></div></div>
-
-    <div class="project"><h3 onclick="toggleContent('p5')">Heat Transfer Coefficient Test Rig</h3><div class="project-content" id="p5"><p>Designed a test rig for Accent Refrigeration to evaluate copper coil heat exchangers. Included a 1 HP pump, 40 kW heater, sensors, P&IDs, and CAD models with testing protocols and documentation.</p></div></div>
-
-    <div class="project"><h3 onclick="toggleContent('p6')">Energy Efficient Grocery Store HVAC</h3><div class="project-content" id="p6"><p>Modeled HVAC layouts with geothermal integration. Used eQUEST and psychrometrics to optimize load balance, equipment sizing, and minimize infiltration in a commercial setting.</p></div></div>
-
-    <div class="project"><h3 onclick="toggleContent('p7')">Hybrid Tilt-Rotor VTOL Aircraft</h3><div class="project-content" id="p7"><p>Designed a hybrid-electric tilt-rotor VTOL for BC Wildfire Service to carry 10 passengers. Balanced structural design and power-to-weight ratios while maintaining transition flight stability and range optimization.</p></div></div>
-
+  <section class="max-w-4xl mx-auto px-6">
+    <h2 class="text-2xl font-semibold my-4">About Me</h2>
+    <p class="text-lg">
+      Soon-to-be graduate in Mechanical Engineering from the University of Victoria, specializing in energy systems, thermo-fluids, and aerodynamics.
+      With experience in engineering design, fabrication, energy modeling, and real-world implementation of thermal systems, I aim to solve technical problems 
+      with practical impact across clean energy, aerospace, and industrial design sectors.
+    </p>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Kathan Sanghvi | Portfolio</p>
-  </footer>
+  <section class="max-w-4xl mx-auto px-6 mt-10">
+    <h2 class="text-2xl font-semibold mb-4">Awards</h2>
+    <ul class="list-disc ml-6 space-y-2">
+      <li><a href="javascript:void(0);" onclick="toggleModal('capstoneModal')">Marianne Black Award for Best Design – UVic Capstone 2025</a></li>
+      <li>International IB Scholarship</li>
+      <li>President’s Beyond Borders Fund</li>
+    </ul>
+  </section>
 
+  <!-- Capstone Modal -->
+  <div id="capstoneModal" class="hidden fixed inset-0 z-50 flex items-center justify-center modal-bg">
+    <div class="bg-white dark:bg-gray-900 rounded-lg max-w-2xl p-6 shadow-lg relative">
+      <button onclick="toggleModal('capstoneModal')" class="absolute top-3 right-4 text-gray-500 hover:text-red-600">&times;</button>
+      <h3 class="text-2xl font-semibold mb-2">Recirculating Water Bath (Capstone Project)</h3>
+      <p class="mb-3">Award-winning project for biomedical thermal control. Designed and built a precision-controlled water bath with ±0.1°C tolerance using CFD-optimized flow geometry, in-house fabrication, and PI-controlled feedback loops. Recognized for design innovation and mechanical execution at UVic’s Capstone Showcase 2025.</p>
+      <img src="capstone-preview.jpg" alt="Capstone Water Bath" class="rounded shadow-lg max-h-64">
+    </div>
+  </div>
+
+  
+<!-- Project Modals -->
+<div id="capstoneModal" class="hidden fixed inset-0 z-50 flex items-center justify-center modal-bg">
+  <div class="bg-white dark:bg-gray-900 rounded-lg max-w-2xl p-6 shadow-lg relative">
+    <button onclick="toggleModal('capstoneModal')" class="absolute top-3 right-4 text-gray-500 hover:text-red-600">&times;</button>
+    <h3 class="text-2xl font-semibold mb-2">Recirculating Water Bath (Capstone Project)</h3>
+    <p class="mb-3">Award-winning precision thermal control system for biomedical testing, developed using CFD, PI control, and stainless steel design. Built in-house and optimized for real-world lab use.</p>
+    <img src="capstone.jpg" alt="Capstone CAD" class="rounded shadow-lg max-h-64 w-full object-cover">
+  </div>
+</div>
+
+<div id="testRigModal" class="hidden fixed inset-0 z-50 flex items-center justify-center modal-bg">
+  <div class="bg-white dark:bg-gray-900 rounded-lg max-w-2xl p-6 shadow-lg relative">
+    <button onclick="toggleModal('testRigModal')" class="absolute top-3 right-4 text-gray-500 hover:text-red-600">&times;</button>
+    <h3 class="text-2xl font-semibold mb-2">Heat Transfer Test Rig (Accent Refrigeration)</h3>
+    <p class="mb-3">Designed a heat transfer test rig to evaluate copper coil heat exchangers submerged in ice water. System included heating coils, pump, agitator, and instrumentation.</p>
+    <img src="test_rig.jpg" alt="Test Rig CAD" class="rounded shadow-lg max-h-64 w-full object-cover">
+  </div>
+</div>
+
+<div id="vtolModal" class="hidden fixed inset-0 z-50 flex items-center justify-center modal-bg">
+  <div class="bg-white dark:bg-gray-900 rounded-lg max-w-2xl p-6 shadow-lg relative">
+    <button onclick="toggleModal('vtolModal')" class="absolute top-3 right-4 text-gray-500 hover:text-red-600">&times;</button>
+    <h3 class="text-2xl font-semibold mb-2">Hybrid Tilt-Rotor VTOL Aircraft</h3>
+    <p class="mb-3">Engineered a hybrid-electric tilt-rotor aircraft for wildfire crew transport with improved cruise efficiency and lift transitions. Modeled aerodynamic behavior and propulsion integration.</p>
+    <img src="vtol.jpg" alt="VTOL CAD" class="rounded shadow-lg max-h-64 w-full object-cover">
+  </div>
+</div>
+
+<div id="bikeFrameModal" class="hidden fixed inset-0 z-50 flex items-center justify-center modal-bg">
+  <div class="bg-white dark:bg-gray-900 rounded-lg max-w-2xl p-6 shadow-lg relative">
+    <button onclick="toggleModal('bikeFrameModal')" class="absolute top-3 right-4 text-gray-500 hover:text-red-600">&times;</button>
+    <h3 class="text-2xl font-semibold mb-2">CFD/FEA Optimization of Bike Frame</h3>
+    <p class="mb-3">Reduced aerodynamic drag by 30% while preserving structural strength using Siemens NX FEA and CFD. Optimized for high-speed racing geometry with real-world wind simulations.</p>
+    <img src="bike_frame.jpg" alt="Bike Frame CAD" class="rounded shadow-lg max-h-64 w-full object-cover">
+  </div>
+</div>
+
+<div id="hvacModal" class="hidden fixed inset-0 z-50 flex items-center justify-center modal-bg">
+  <div class="bg-white dark:bg-gray-900 rounded-lg max-w-2xl p-6 shadow-lg relative">
+    <button onclick="toggleModal('hvacModal')" class="absolute top-3 right-4 text-gray-500 hover:text-red-600">&times;</button>
+    <h3 class="text-2xl font-semibold mb-2">Energy-Efficient HVAC Design</h3>
+    <p class="mb-3">Designed a geothermal HVAC system for a grocery store using eQUEST and psychrometric calculations. Focused on infiltration reduction and thermal zoning with realistic load modeling.</p>
+    <img src="hvac.jpg" alt="HVAC CAD" class="rounded shadow-lg max-h-64 w-full object-cover">
+  </div>
+</div>
+
+<div id="moldModal" class="hidden fixed inset-0 z-50 flex items-center justify-center modal-bg">
+  <div class="bg-white dark:bg-gray-900 rounded-lg max-w-2xl p-6 shadow-lg relative">
+    <button onclick="toggleModal('moldModal')" class="absolute top-3 right-4 text-gray-500 hover:text-red-600">&times;</button>
+    <h3 class="text-2xl font-semibold mb-2">Mold Design and CNC Manufacturing</h3>
+    <p class="mb-3">Created a complex 3D mold for a mountain bike pedal using HDPE. Used Mastercam for CAM programming, Vericut for simulation, and optimized toolpaths for accuracy and finish quality.</p>
+    <img src="mold.jpg" alt="Mold CAD" class="rounded shadow-lg max-h-64 w-full object-cover">
+  </div>
+</div>
+
+<div id="pipelineModal" class="hidden fixed inset-0 z-50 flex items-center justify-center modal-bg">
+  <div class="bg-white dark:bg-gray-900 rounded-lg max-w-2xl p-6 shadow-lg relative">
+    <button onclick="toggleModal('pipelineModal')" class="absolute top-3 right-4 text-gray-500 hover:text-red-600">&times;</button>
+    <h3 class="text-2xl font-semibold mb-2">CO₂ Pipeline Analysis</h3>
+    <p class="mb-3">Performed exergy and cost analysis of CO₂ pipeline networks for carbon capture. Evaluated booster pump spacing, phase behavior, and compression economics.</p>
+    <img src="co2_pipeline.jpg" alt="CO2 Pipeline CAD" class="rounded shadow-lg max-h-64 w-full object-cover">
+  </div>
+</div>
+
+<footer class="text-center py-8 mt-12 border-t border-gray-300 dark:border-gray-600">
+    <p>&copy; 2025 Kathan Sanghvi</p>
+  </footer>
 </body>
 </html>
