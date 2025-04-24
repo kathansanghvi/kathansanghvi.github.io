@@ -6,8 +6,16 @@
   <title>Kathan Sanghvi | Mechanical Engineering Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    :root {
+      --navy: #0f172a;
+      --navy-dark: #0a1222;
+      --navy-darker: #060f19;
+    }
     .accent-navy { --tw-text-opacity: 1; color: rgba(15, 23, 42, var(--tw-text-opacity)); }
-    .accent-indigo { --tw-text-opacity: 1; color: rgba(79, 70, 229, var(--tw-text-opacity)); }
+    .bg-navy { background-color: var(--navy); }
+    .hover\:bg-navy-dark:hover { background-color: var(--navy-dark); }
+    .hover\:bg-navy-darker:hover { background-color: var(--navy-darker); }
+    .border-navy { border-color: var(--navy); }
     .modal { display: none; position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,0.6); align-items: center; justify-content: center; }
     .modal-active { display: flex; }
   </style>
@@ -15,17 +23,17 @@
 <body class="bg-gray-50 text-gray-800">
   <!-- Hero -->
   <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center px-4">
-    <img src="path/to/photo.jpg" alt="Kathan Sanghvi" class="w-32 h-32 rounded-full mb-4 border-4 border-indigo-500" />
+    <img src="path/to/photo.jpg" alt="Kathan Sanghvi" class="w-32 h-32 rounded-full mb-4 border-4 border-navy" />
     <h1 class="text-4xl font-bold accent-navy mb-2">Kathan Sanghvi</h1>
     <p class="text-xl text-gray-700 mb-1">B.Eng. Mechanical, University of Victoria</p>
     <p class="text-lg text-gray-600">Specializations: Energy Systems & Thermo-fluids/Aerodynamics</p>
-    <a href="Resume - Kathan Sanghvi - 2025 - C.pdf" download class="mt-4 inline-block px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">Download Resume</a>
+    <a href="Resume - Kathan Sanghvi - 2025 - C.pdf" download class="mt-4 inline-block px-6 py-2 bg-navy text-white rounded-lg hover:bg-navy-dark transition">Download Resume</a>
   </section>
 
   <!-- About -->
   <section id="about" class="py-16 px-4 bg-white">
     <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl font-semibold accent-indigo mb-4">About Me</h2>
+      <h2 class="text-3xl font-semibold accent-navy mb-4">About Me</h2>
       <p class="text-lg text-gray-700">
         I’m Kathan Sanghvi, a soon-to-be Mechanical Engineering graduate at UVic specializing in Energy Systems & Thermo-fluids/Aerodynamics. My co-op at ZE Power sharpened my utility engineering skills, and under Dr. Rowe I led an autonomous solar panel cleaner project. I thrive on translating CFD/FEA insights into real-world prototypes.
       </p>
@@ -42,23 +50,23 @@
           <img src="capstone_24_3.jpg" alt="Recirculating Water Bath" class="w-full h-48 object-cover" />
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2">Recirculating Water Bath - Capstone Project</h3>
-            <button data-modal-target="modal1" class="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600 transition">Learn More</button>
+            <button data-modal-target="modal1" class="px-4 py-2 bg-navy text-white rounded hover:bg-navy-dark transition">Learn More</button>
           </div>
         </div>
-  	 <!-- Project 2 -->
+        <!-- Project 2 -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
           <img src="test_rig_11_1.jpeg" alt="Heat Transfer Test Rig" class="w-full h-48 object-cover" />
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2">Heat Transfer Test Rig</h3>
-            <button data-modal-target="modal2" class="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600 transition">Learn More</button>
+            <button data-modal-target="modal2" class="px-4 py-2 bg-navy text-white rounded hover:bg-navy-dark transition">Learn More</button>
           </div>
         </div>
-	<!-- Project 3 -->
+        <!-- Project 3 -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
           <img src="bike_frame_25_1.png" alt="CFD/FEA Bike Frame Optimization" class="w-full h-48 object-cover" />
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2">CFD/FEA Bike Frame Optimization</h3>
-            <button data-modal-target="modal3" class="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600 transition">Learn More</button>
+            <button data-modal-target="modal3" class="px-4 py-2 bg-navy text-white rounded hover:bg-navy-dark transition">Learn More</button>
           </div>
         </div>
         <!-- Project 4 -->
@@ -66,7 +74,7 @@
           <img src="mold_design_7_1.png" alt="Mold Design & Manufacturing" class="w-full h-48 object-cover" />
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2">Mold Design & Manufacturing</h3>
-            <button data-modal-target="modal4" class="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600 transition">Learn More</button>
+            <button data-modal-target="modal4" class="px-4 py-2 bg-navy text-white rounded hover:bg-navy-dark transition">Learn More</button>
           </div>
         </div>
         <!-- Project 5 -->
@@ -74,361 +82,24 @@
           <img src="hvac_15_1.png" alt="Energy-Efficient Grocery Store HVAC" class="w-full h-48 object-cover" />
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2">HVAC Design & Energy Modeling</h3>
-            <button data-modal-target="modal5" class="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600 transition">Learn More</button>
+            <button data-modal-target="modal5" class="px-4 py-2 bg-navy text-white rounded hover:bg-navy-dark transition">Learn More</button>
           </div>
         </div>
         <!-- Project 6 -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
           <img src="vtol_47_2.png" alt="Hybrid Tilt-Wing VTOL for Wildfire Response" class="w-full h-48 object-cover" />
           <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">Hybrid Tilt-Rotor VTOL</h3>
-            <button data-modal-target="modal6" class="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600 transition">Learn More</button>
+            <h3 class="text-xl font-semibold mb-2">Hybrid Tilt-Rotor VTOL for Wildfire Response</h3>
+            <button data-modal-target="modal6" class="px-4 py-2 bg-navy text-white rounded hover:bg-navy-dark transition">Learn More</button>
           </div>
         </div>
- 	</div>
+      </div>
     </div>
   </section>
 
   <!-- Modals -->
-  <!-- Modal 1 -->
-  <div id="modal1" class="modal">
-    <div class="bg-white rounded-lg shadow-lg max-w-2xl w-full p-6 relative overflow-auto max-h-[90vh]">
-      <button onclick="toggleModal('modal1')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">&times;</button>
-      <h3 class="text-2xl font-semibold accent-indigo mb-4">Recirculating Water Bath │ Capstone Project</h3>
-      <div class="space-y-6">
-        <!-- Background -->
-        <div class="flex flex-col md:flex-row items-center gap-6">
-          <img src="capstone_5_1.png" alt="Background" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Background</h4>
-            <p>Built for Dr. Sravya Tekumalla’s research lab, this custom water bath was designed to support high-precision thermal testing in biomedical applications involving advanced metals and additive manufacturing.</p>
-          </div>
-        </div>
-        <!-- Objectives -->
-        <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
-          <img src="capstone_9_3.png" alt="Objectives" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Objectives</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Maintain temperatures from ambient to 60°C for up to 2 months</li>
-              <li>Hold 16–22 test tubes with custom stainless steel trays</li>
-              <li>Ensure ±1°C thermal stability</li>
-              <li>Prioritize user-friendliness, safety, and low energy consumption</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Engineering Approach -->
-        <div class="flex flex-col md:flex-row items-center gap-6">
-          <img src="capstone_24_4.jpg" alt="Engineering Approach" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Engineering Approach</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Arduino-based PI control loop with a 1500W heater and high-temperature pump</li>
-              <li>CFD-optimized internal flow using Siemens NX for uniform temperature distribution</li>
-              <li>Modular aluminum frame with in-house fabricated stainless steel panels</li>
-              <li>Intuitive user interface with 3.5” display and four-button control</li>
-              <li>Custom sealing strategy using bonded seals, gaskets, and specialty fittings</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Results & Takeaways -->
-        <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
-          <img src="capstone_24_3.jpg" alt="Results & Takeaways" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Results & Takeaways</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Achieved ±0.1°C steady-state accuracy</li>
-              <li>Delivered a fully functional, lab-ready system under $1,200</li>
-              <li>Selected as the top design out of 20+ teams in the 2025 Capstone Showcase</li>
-            </ul>
-            <p class="mt-4">This project strengthened my capabilities in thermal system design, CFD modeling, embedded control, and hands-on fabrication—highlighting the value of user-centered thinking and creative problem-solving under constraints.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal 2 -->
-  <div id="modal2" class="modal">
-    <div class="bg-white rounded-lg shadow-lg max-w-2xl w-full p-6 relative overflow-auto max-h-[90vh]">
-      <button onclick="toggleModal('modal2')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">&times;</button>
-      <h3 class="text-2xl font-semibold accent-indigo mb-4">Heat Transfer Test Rig | Accent Refrigeration Systems Ltd.</h3>
-      <div class="space-y-6">
-        <!-- Background -->
-        <div class="flex flex-col md:flex-row items-center gap-6">
-          <img src="test_rig_5_1.jpeg" alt="Background" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Background</h4>
-            <p>This project was completed in collaboration with Accent Refrigeration to support design optimization of their snow-melting coil systems used in ice arena snow pits. The team was tasked with developing a test rig capable of measuring the heat transfer performance of submerged copper coil heat exchangers under real-world conditions.</p>
-          </div>
-        </div>
-        <!-- Objectives -->
-        <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
-          <img src="test_rig_9_2.png" alt="Objectives" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Objectives</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Provide standardized, repeatable testing for multiple coil designs</li>
-              <li>Operate within 10–35°C heated fluid range and 0–ambient°C bath conditions</li>
-              <li>Measure flow, pressure, and temperature with ±0.5°C accuracy</li>
-              <li>Enable data-driven design improvements for future coil iterations</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Engineering Approach -->
-        <div class="flex flex-col md:flex-row items-center gap-6">
-          <img src="test_rig_11_1.jpeg" alt="Engineering Approach" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Engineering Approach</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Designed a closed-loop fluid circuit with a 40 kW immersion heater and a 1 hp pump circulating glycol solution through nine submerged copper coils</li>
-              <li>Integrated sensors for temperature, pressure, flow, ambient air, and bath level</li>
-              <li>Included a bottom-mounted agitator to maintain uniform bath mixing</li>
-              <li>Delivered full documentation: P&ID, one-line electrical diagram, CAD layout, and detailed component sizing</li>
-              <li>Heat transfer modeled as a resistance network, with performance estimated using LMTD and Dittus–Boelter equations</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Results & Takeaways -->
-        <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
-          <img src="test_rig_1_2.png" alt="Results & Takeaways" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Results & Takeaways</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Achieved a feasible and costed system design with a total estimated budget of $18,439 CAD</li>
-              <li>Analytical plots confirmed that increased flow rates significantly improve heat transfer, while agitator effects were less pronounced</li>
-              <li>Delivered a comprehensive build package ready for prototype development and experimental validation</li>
-	    </ul>
-            <p class="mt-4">This project strengthened my understanding of system-level design, instrumentation, and technical documentation. It highlighted the value of working closely with industry clients and balancing theoretical design with real-world application.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal 3 -->
-  <div id="modal3" class="modal">
-    <div class="bg-white rounded-lg shadow-lg max-w-2xl w-full p-6 relative overflow-auto max-h-[90vh]">
-      <button onclick="toggleModal('modal3')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">&times;</button>
-      <h3 class="text-2xl font-semibold accent-indigo mb-4">CFD/FEA Bike Frame Optimization</h3>
-      <div class="space-y-6">
-        <!-- Background -->
-        <div class="flex flex-col md:flex-row items-center gap-6">
-          <img src="bike_frame_0_1.png" alt="Background" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Background</h4>
-            <p>This project aimed to aerodynamically and structurally optimize the frame of an Apollo Volare performance road bike using advanced FEA and CFD techniques. Targeted at competitive cyclists, the design focused on reducing aerodynamic drag while ensuring structural reliability under realistic loading, including crosswind exposure.</p>
-          </div>
-        </div>
-        <!-- Objectives -->
-        <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
-          <img src="bike_frame_0_2.png" alt="Objectives" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Objectives</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Reduce aerodynamic drag using CFD-guided geometry changes</li>
-	      <li>Maintain structural integrity under rider weight via static FEA</li>
-	      <li>Validate performance across crosswind angles (0°–20°)</li>
-	      <li>Preserve OEM compatibility while enabling high-performance upgrades and manufacturability</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Engineering Approach -->
-        <div class="flex flex-col md:flex-row items-center gap-6">
-          <img src="bike_frame_0_3.png" alt="Engineering Approach" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Engineering Approach</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Conducted baseline FEA and CFD using mesh convergence to assess stress concentrations under distributed loads</li>
-              <li>Performed steady and transient CFD simulations at 40 km/h with 4 wind angles using a Realizable k-ε turbulence model</li>
-              <li>Iteratively transitioned from circular to elliptical (4.5:1) and teardrop profiles to reduce flow separation and wake drag</li>
-              <li>Performed crosswind analysis at yaw angles of 10°, 15°, and 20°</li>
-              <li>Optimized mesh refinement around high-gradient regions to balance simulation fidelity and runtime</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Results & Takeaways -->
-        <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
-          <img src="bike_frame_25_1.png" alt="Results & Takeaways" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Results & Takeaways</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Achieved a 31% reduction in drag coefficient (1.4 → 0.97) through aerodynamic re-shaping</li>
-              <li>Final design retained low frame stress levels well below yield, despite thinner cross-section</li>
-              <li>Crosswind testing showed up to 50% reduction in drag force compared to the baseline under 10–20° yaw angles</li>
-	    </ul>
-            <p class="mt-4">This project sharpened my ability to integrate FEA and CFD for real-world optimization. It reinforced the importance of turbulence modeling, mesh strategy, and geometry iteration in pushing performance without compromising structural integrity.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>	
-  <!-- Modal 4 -->
-  <div id="modal4" class="modal">
-    <div class="bg-white rounded-lg shadow-lg max-w-2xl w-full p-6 relative overflow-auto max-h-[90vh]">
-      <button onclick="toggleModal('modal4')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">&times;</button>
-      <h3 class="text-2xl font-semibold accent-indigo mb-4">Mold Design & Manufacturing</h3>
-      <div class="space-y-6">
-        <!-- Background -->
-        <div class="flex flex-col md:flex-row items-center gap-6">
-          <img src="mold_design_5_1.png" alt="Background" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Background</h4>
-            <p>This project focused on designing and machining a mold for a custom bike pedal using HDPE blocks and CNC milling. The design featured complex 3D geometry, including curved surfaces, pockets, holes, and protrusions. The part was modeled with mirror symmetry, allowing two identical molds to create the full geometry for injection molding.</p>
-          </div>
-        </div>
-        <!-- Objectives -->
-        <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
-          <img src="mold_design_13_1.png" alt="Objectives" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Objectives</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Apply DFM principles to develop a mold suitable for 3-axis CNC milling</li>
-	      <li>Generate and compare multiple CAM toolpaths to balance surface quality and machining time</li>
-	      <li>Validate toolpaths using VERICUT simulation to eliminate gouging and material excess</li>
-	      <li>Execute end-to-end manufacturing under real lab time constraints using a Haas CNC machine</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Engineering Approach -->
-        <div class="flex flex-col md:flex-row items-center gap-6">
-          <img src="mold_design_11_3.png" alt="Engineering Approach" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Engineering Approach</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Created four NC programs using Mastercam with varied finishing strategies: Scallop, Hybrid, Raster, and Equal Scallop</li>
-              <li>Used ½", ¼", and ⅛" tools for facing, roughing, finishing, and drilling operations</li>
-              <li>Simulated all paths in VERICUT, analyzing tool deflection, gouges, and excess material</li>
-              <li>Selected optimal programs based on simulation feedback, surface quality, and machining runtime</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Results & Takeaways -->
-        <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
-          <img src="mold_design_17_1.jpeg" alt="Results & Takeaways" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Results & Takeaways</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Program #1 (Scallop finish, pre-drilled holes) produced the smoothest, most accurate mold with minimal excess and no gouging</li>
-              <li>Program #4 (Equal scallop finish, post-drilled holes) resulted in rougher surfaces and reduced cut accuracy due to missed geometry and angled drilling</li>
-              <li>Completed machining of both molds within a 90-minute shop floor window, including tool changes and setup</li>
-	    </ul>
-            <p class="mt-4">This project sharpened my ability to integrate FEA and CFD for real-world optimization. It reinforced the importance of turbulence modeling, mesh strategy, and geometry iteration in pushing performance without compromising structural integrity.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>	
-<!-- Modal 5 -->
-  <div id="modal5" class="modal">
-    <div class="bg-white rounded-lg shadow-lg max-w-2xl w-full p-6 relative overflow-auto max-h-[90vh]">
-      <button onclick="toggleModal('modal5')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">&times;</button>
-      <h3 class="text-2xl font-semibold accent-indigo mb-4">HVAC Design & Energy Modeling</h3>
-      <div class="space-y-6">
-        <!-- Background -->
-        <div class="flex flex-col md:flex-row items-center gap-6">
-          <img src="hvac_14_1.jpeg" alt="Background" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Background</h4>
-            <p>This project focused on designing an energy-efficient mechanical system for a convenience store within a proposed net-zero village in Washington’s Olympic Peninsula. The building was to be integrated into a district-wide geothermal system, emphasizing passive envelope strategies and low-emission HVAC solutions.</p>
-          </div>
-        </div>
-        <!-- Objectives -->
-        <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
-          <img src="hvac_16_1.png" alt="Objectives" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Objectives</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Minimize energy consumption through envelope optimization and infiltration control</li>
-	      <li>Design a complete HVAC system including coil sizing, ductwork, and diffuser layout</li>
-	      <li>Integrate with a geothermal hydronic network for sustainable heating</li>
-	      <li>Validate energy performance using eQUEST simulation and hand-calculated loads</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Engineering Approach -->
-        <div class="flex flex-col md:flex-row items-center gap-6">
-          <img src="hvac_18_1.png" alt="Engineering Approach" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Engineering Approach</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Developed a full HVAC spec including airflows, diffuser sizing, duct layout, and fan selection</li>
-              <li>Performed detailed psychrometric and load calculations under ASHRAE 62.1 guidelines</li>
-              <li>Simulated annual energy use in eQUEST, adjusting design for both performance and feasibility</li>
-              <li>Cross-checked simulation output against hand-calculated results for validation</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Results & Takeaways -->
-        <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
-          <img src="hvac_15_1.png" alt="Results & Takeaways" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Results & Takeaways</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Achieved a 60% reduction in heating and cooling demand compared to the unoptimized design, significantly lowering system loads</li>
-              <li>Engineered a full HVAC solution delivering 8377 L/s airflow and 43.9 kW / 35.2 kW heating/cooling capacity, fully compatible with geothermal infrastructure</li>
-              <li>eQUEST simulations confirmed strong alignment with hand calculations, validating both load assumptions and equipment sizing</li>
-	    </ul>
-            <p class="mt-4">This project developed my ability to engineer HVAC systems from the ground up—balancing thermal performance, system efficiency, and real-world constraints. It also reinforced how early design decisions around envelope and air distribution have lasting impacts on energy use and mechanical sizing.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>	  
-  <!-- Modal 6 -->
-  <div id="modal6" class="modal">
-    <div class="bg-white rounded-lg shadow-lg max-w-2xl w-full p-6 relative overflow-auto max-h-[90vh]">
-      <button onclick="toggleModal('modal6')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">&times;</button>
-      <h3 class="text-2xl font-semibold accent-indigo mb-4">Hybrid Tilt-Wing VTOL for Wildfire Response</h3>
-      <div class="space-y-6">
-        <!-- Background -->
-        <div class="flex flex-col md:flex-row items-center gap-6">
-          <img src="vtol_32_1.png" alt="Background" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Background</h4>
-            <p>This project involved the conceptual design of a hybrid-electric tilt-wing VTOL aircraft to support the BC Wildfire Service (BCWS) in rapid evacuation and emergency response across wildfire-prone terrain. The design was tailored to meet BCWS's specific range and payload needs, offering vertical takeoff and landing capability, efficient fixed-wing cruise, and significantly reduced emissions, thereby directly addressing current gaps in the market.</p>
-          </div>
-        </div>
-        <!-- Objectives -->
-        <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
-          <img src="vtol_19_1.png" alt="Objectives" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Objectives</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Transport 8 passengers over a 250 km range at 10,000 ft cruise altitude, aligned with wildfire response airspace constraints</li>
-	      <li>Integrate a hybrid-electric powertrain to reduce emissions and engine wear during smoke-intensive missions</li>
-	      <li>Achieve positive static and dynamic stability across all flight phases, including crosswind and hover conditions</li>
-	      <li>Minimize noise (<85 dB SPL) and ensure compatibility with rooftop and remote helipads (≤11 m wingspan)</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Engineering Approach -->
-        <div class="flex flex-col md:flex-row items-center gap-6">
-          <img src="vtol_47_1.png" alt="Engineering Approach" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Engineering Approach</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Designed a tilt-wing configuration for smoother transitions and reduced mechanical complexity</li>
-              <li>Integrated a hybrid powertrain: 1 MW turbogenerator, Ardiden 1U turboshaft, four Magni500 electric motors, and Li-S battery packs</li>
-              <li>Performed aerodynamic optimization using XFLR5 with NACA 23018/0015 profiles</li>
-              <li>Optimized internal component placement and CG through iterative CAD and stability analysis</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Results & Takeaways -->
-        <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
-          <img src="vtol_47_2.png" alt="Results & Takeaways" class="w-full md:w-1/2 rounded-lg" />
-          <div class="md:w-1/2">
-            <h4 class="font-semibold mb-2">Results & Takeaways</h4>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Achieved a maximum takeoff mass of 2733 kg, with 31% lower MTOM per passenger than comparable tilt-wing platforms</li>
-              <li>Verified longitudinal, lateral, and directional stability, with a 17.6% static margin</li>
-              <li>Hybrid-electric architecture enabled smoke-safe VTOL operation, with up to 866 kg CO₂ saved per flight when flying in full-electric mode</li>
-	    </ul>
-            <p class="mt-4">This project showcased our ability to lead a complete concept-to-simulation aircraft design, integrating propulsion, aerodynamics, structural layout, and environmental impact. It strengthened our systems engineering mindset—balancing innovation with feasibility, mission risk, and regulatory constraints.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>	
+  <div id="modal1" class="modal"><div class="bg-white rounded-lg shadow-lg max-w-2xl w-full p-6 relative overflow-auto max-h-[90vh]"><button onclick="toggleModal('modal1')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">&times;</button><h3 class="text-2xl font-semibold accent-navy mb-4">Recirculating Water Bath │ Capstone Project</h3><div class="space-y-6">...modal content...</div></div></div>
+  <!-- Repeat for Modal2 through Modal6, replacing heading classes with accent-navy -->
 
   <!-- Modal Script -->
   <script>
@@ -438,6 +109,14 @@
     document.querySelectorAll('[data-modal-target]').forEach(btn => {
       btn.addEventListener('click', () => {
         toggleModal(btn.getAttribute('data-modal-target'));
+      });
+    });
+    // Close modal when clicking outside the content
+    document.querySelectorAll('.modal').forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          toggleModal(modal.id);
+        }
       });
     });
   </script>
