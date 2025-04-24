@@ -31,12 +31,21 @@
 </head>
 <body>
 
+  <header
   <header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-slate-800">Kathan Sanghvi</h1>
-      <a href="Resume - Kathan Sanghvi - 2025 - C.pdf" download class="text-blue-600 hover:underline text-sm">Download Resume</a>
+    <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+      <div>
+        <h1 class="text-4xl font-bold text-slate-800">Kathan Sanghvi</h1>
+        <p class="text-lg text-slate-600">B.Eng Mechanical Engineering, University of Victoria</p>
+        <p class="text-sm text-slate-500">Specializations: Energy Systems, Thermo-fluids, Aerodynamics</p>
+      </div>
+      <div class="text-right">
+        <p class="text-sm text-slate-500 mb-1">kathansanghvi5@gmail.com</p>
+        <a href="Resume - Kathan Sanghvi - 2025 - C.pdf" download class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700 transition">Download Resume</a>
+      </div>
     </div>
   </header>
+</header>
 
   <main class="max-w-6xl mx-auto px-6 fade-in">
 
@@ -116,7 +125,10 @@
   <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
     <button onclick="toggleModal('capstoneModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
     <h3 class="text-2xl font-semibold mb-4">Recirculating Water Bath (Capstone Project)</h3>
-    <img src="capstone.jpg" alt="Capstone" class="w-full h-40 object-cover rounded mb-4">
+    <div class="grid grid-cols-2 gap-4 mb-6">
+    <img src="images/capstone_19_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+    <img src="images/capstone_7_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+</div>
     <h4 class="font-semibold mb-1">Background</h4>
     <p class="mb-3">Developed for UVic’s thermal engineering labs to support biomedical experiments requiring ±0.1°C precision, replacing costly commercial baths.</p>
     <h4 class="font-semibold mb-1">Objectives</h4>
@@ -130,29 +142,41 @@
   </div>
 </div>
 <!-- Test Rig Modal -->
-<div id="testRigModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-  <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
-    <button onclick="toggleModal('testRigModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
-    <h3 class="text-2xl font-semibold mb-4">Heat Transfer Test Rig (Accent Refrigeration)</h3>
-    <img src="test_rig.jpg" alt="Test Rig" class="w-full h-40 object-cover rounded mb-4">
-    <h4 class="font-semibold mb-1">Background</h4>
-    <p class="mb-3">Built with Accent Refrigeration to measure heat transfer coefficients in copper coils submerged in ice water, simulating refrigeration systems.</p>
-    <h4 class="font-semibold mb-1">Objectives</h4>
-    <p class="mb-3">Deliver a test loop with calibrated RTDs, flow/pressure sensors, and DAQ readiness for accurate HTC measurement at 5–10 GPM.</p>
-    <h4 class="font-semibold mb-1">Design & Engineering Approach</h4>
-    <p class="mb-3">Integrated 1 HP pump, 40 kW heater, inline flow meters, pressure transducers, and agitator. P&ID and isometric layouts guided fabrication.</p>
-    <h4 class="font-semibold mb-1">Challenges</h4>
-    <p class="mb-3">Maintaining bath uniformity under variable loads, sensor calibration, and preventing stratification without compromising access.</p>
-    <h4 class="font-semibold mb-1">Results</h4>
-    <p class="mb-3">Rig validated with repeatable data matching theoretical HTC. Adopted by Accent Refrigeration for design refinements.</p>
+
+<!-- Heat Transfer Test Rig Modal (LinkedIn-aligned) -->
+<div id="testRigModal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+  <div class="bg-white rounded-lg p-8 w-full mx-4 max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl transform transition-all hover:scale-102">
+    <button onclick="toggleModal('testRigModal')" class="absolute top-6 right-8 text-gray-500 hover:text-red-600 text-3xl">&times;</button>
+    <h2 class="text-3xl font-bold mb-4">Heat Transfer Test Rig</h2>
+    <p class="mb-4 text-slate-700">Last week, my team and I presented our Design of Thermofluids project at UVic! We designed a test rig for Accent Refrigeration Systems Ltd to evaluate the heat transfer performance of submerged copper coil heat exchangers used for melting arena ice shavings.</p>
+    <h3 class="text-2xl font-semibold mt-4 mb-2">Final Design</h3>
+    <ul class="list-disc pl-6 mb-4 text-slate-700">
+      <li>1 HP circulation pump and 40 kW immersion heater</li>
+      <li>Heated propylene glycol loop connected to submerged copper coils (1&quot; CTS Type K, OD 1.125&quot;, ID 0.995&quot;)</li>
+      <li>Fully instrumented for real-time monitoring: flowmeter, pressure transducers, and RTDs</li>
+      <li>Complete engineering documentation: P&ID, one-line electrical schematic, CAD drawings</li>
+      <li>Pump and agitator sized based on Reynolds number (Re=1400–2800) to ensure turbulent mixing</li>
+      <li>Environmental and structural guidelines for reproducible testing in lab conditions</li>
+    </ul>
+    <h3 class="text-2xl font-semibold mt-4 mb-2">Technical Details</h3>
+    <p class="mb-4 text-slate-700"><strong>Thermodynamics:</strong> LMTD method for coil heat transfer, validated within ±5% of theoretical values.</p>
+    <p class="mb-4 text-slate-700"><strong>Fluid Mechanics:</strong> Pump head calculations (14.8 m), EPDM tubing selection per Darcy-Weisbach analysis.</p>
+    <p class="mb-4 text-slate-700"><strong>Controls & Data Acquisition:</strong> DAQ-ready layout, voltage/current monitoring of heater, and agitator sequencing to prevent stratification.</p>
   </div>
 </div>
+
 <!-- VTOL Modal -->
 <div id="vtolModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
   <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
     <button onclick="toggleModal('vtolModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
     <h3 class="text-2xl font-semibold mb-4">Hybrid Tilt-Wing VTOL Aircraft</h3>
-    <img src="vtol.jpg" alt="VTOL" class="w-full h-40 object-cover rounded mb-4">
+    <div class="grid grid-cols-2 gap-4 mb-6">
+    <div class="grid grid-cols-2 gap-4 mb-6">
+    <img src="images/vtol_1_1.jpeg" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+    <img src="images/vtol_15_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+</div>
+    <img src="images/test_rig_5_1.jpeg" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+</div>
     <h4 class="font-semibold mb-1">Background</h4>
     <p class="mb-3">Concept for BC Wildfire Service, enabling runway-independent transport of crews to remote wildfire zones.</p>
     <h4 class="font-semibold mb-1">Objectives</h4>
@@ -170,7 +194,10 @@
   <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
     <button onclick="toggleModal('bikeFrameModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
     <h3 class="text-2xl font-semibold mb-4">CFD/FEA Road Bike Frame</h3>
-    <img src="bike_frame.jpg" alt="Bike Frame" class="w-full h-40 object-cover rounded mb-4">
+    <div class="grid grid-cols-2 gap-4 mb-6">
+    <img src="images/bike_frame_1_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+    <img src="images/bike_frame_7_1.jpeg" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+</div>
     <h4 class="font-semibold mb-1">Background</h4>
     <p class="mb-3">Optimized a road bike frame for competitive cycling, targeting aerodynamic improvement without losing structural integrity.</p>
     <h4 class="font-semibold mb-1">Objectives</h4>
@@ -188,7 +215,10 @@
   <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
     <button onclick="toggleModal('hvacModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
     <h3 class="text-2xl font-semibold mb-4">Geothermal HVAC Modeling</h3>
-    <img src="hvac.jpg" alt="HVAC" class="w-full h-40 object-cover rounded mb-4">
+    <div class="grid grid-cols-2 gap-4 mb-6">
+    <img src="images/hvac_5_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+    <img src="images/hvac_15_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+</div>
     <h4 class="font-semibold mb-1">Background</h4>
     <p class="mb-3">Modeled HVAC for a grocery site on geothermal district heating to reduce energy use and carbon footprint.</p>
     <h4 class="font-semibold mb-1">Objectives</h4>
@@ -206,7 +236,10 @@
   <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
     <button onclick="toggleModal('moldModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
     <h3 class="text-2xl font-semibold mb-4">CNC Mold Design</h3>
-    <img src="mold.jpg" alt="Mold" class="w-full h-40 object-cover rounded mb-4">
+    <div class="grid grid-cols-2 gap-4 mb-6">
+    <img src="images/mold_design_4_1.jpeg" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+    <img src="images/mold_design_7_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+</div>
     <h4 class="font-semibold mb-1">Background</h4>
     <p class="mb-3">CNC-machined HDPE mold for bicycle pedal in a manufacturing course, evaluating toolpath impacts on finish and time.</p>
     <h4 class="font-semibold mb-1">Objectives</h4>
@@ -224,7 +257,10 @@
   <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
     <button onclick="toggleModal('pipelineModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
     <h3 class="text-2xl font-semibold mb-4">CO₂ Pipeline Analysis</h3>
-    <img src="co2_pipeline.jpg" alt="CO2 Pipeline" class="w-full h-40 object-cover rounded mb-4">
+    <div class="grid grid-cols-2 gap-4 mb-6">
+    <img src="images/co2_pipeline_1_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+    <img src="images/co2_pipeline_9_1.png" alt="" class="w-full h-40 object-cover rounded shadow-lg">
+</div>
     <h4 class="font-semibold mb-1">Background</h4>
     <p class="mb-3">Techno-economic modeling for long-haul CO₂ transport from capture sites to sequestration, assessing costs and exergy losses.</p>
     <h4 class="font-semibold mb-1">Objectives</h4>
