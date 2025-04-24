@@ -102,23 +102,55 @@
   <div id="modal1" class="modal">
     <div class="bg-white rounded-lg shadow-lg max-w-2xl w-full p-6 relative overflow-auto max-h-[90vh]">
       <button onclick="toggleModal('modal1')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">&times;</button>
-      <h3 class="text-2xl font-semibold accent-indigo mb-4">Recirculating Water Bath</h3>
+      <h3 class="text-2xl font-semibold accent-indigo mb-4">Recirculating Water Bath │ Capstone Project</h3>
       <div class="space-y-6">
+        <!-- Background -->
         <div class="flex flex-col md:flex-row items-center gap-6">
-          <img src="recirc1.jpg" alt="" class="w-full md:w-1/2 rounded-lg" />
-          <p class="text-gray-700 md:w-1/2">Developed a precision recirculating water bath with ±0.1°C accuracy for biomedical testing, featuring a 1500W heater and high-temp pump under PI control (MECH 400B).​</p>
+          <img src="capstone_5_1.png" alt="Background" class="w-full md:w-1/2 rounded-lg" />
+          <div class="md:w-1/2">
+            <h4 class="font-semibold mb-2">Background</h4>
+            <p>Built for Dr. Sravya Tekumalla’s research lab, this custom water bath was designed to support high-precision thermal testing in biomedical applications involving advanced metals and additive manufacturing.</p>
+          </div>
         </div>
+        <!-- Objectives -->
         <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
-          <img src="recirc2.jpg" alt="" class="w-full md:w-1/2 rounded-lg" />
-          <p class="text-gray-700 md:w-1/2">Conducted CFD modeling in Siemens NX using SST turbulence for uniform thermal distribution, iterating mesh convergence to 12mm for performance-efficiency balance.</p>
+          <img src="capstone_9_3.png" alt="Objectives" class="w-full md:w-1/2 rounded-lg" />
+          <div class="md:w-1/2">
+            <h4 class="font-semibold mb-2">Objectives</h4>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>Maintain temperatures from ambient to 60°C for up to 2 months</li>
+              <li>Hold 16–22 test tubes with custom stainless steel trays</li>
+              <li>Ensure ±0.1°C thermal stability</li>
+              <li>Prioritize user-friendliness, safety, and low energy consumption</li>
+            </ul>
+          </div>
         </div>
+        <!-- Engineering Approach -->
         <div class="flex flex-col md:flex-row items-center gap-6">
-          <img src="recirc3.jpg" alt="" class="w-full md:w-1/2 rounded-lg" />
-          <p class="text-gray-700 md:w-1/2">Fabricated 80–90% of components in-house: sheet-metal enclosure, plumbing with SS tub and float safety sensor, achieving <1°C gradient during extended operations.</p>
+          <img src="capstone_19_3.png" alt="Engineering Approach" class="w-full md:w-1/2 rounded-lg" />
+          <div class="md:w-1/2">
+            <h4 class="font-semibold mb-2">Engineering Approach</h4>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>Arduino-based PI control loop with a 1500W heater and high-temperature pump</li>
+              <li>CFD-optimized internal flow using Siemens NX for uniform temperature distribution</li>
+              <li>Modular aluminum frame with in-house fabricated stainless steel panels</li>
+              <li>Intuitive user interface with 3.5” display and four-button control</li>
+              <li>Custom sealing strategy using bonded seals, gaskets, and specialty fittings</li>
+            </ul>
+          </div>
         </div>
+        <!-- Results & Takeaways -->
         <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
-          <img src="recirc4.jpg" alt="" class="w-full md:w-1/2 rounded-lg" />
-          <p class="text-gray-700 md:w-1/2">Integrated user interface with 3.5” TFT display and Arduino-based PI algorithm to set temperature/timer, plus fail-safes like low-level cutout and magnesium anode protection.</p>
+          <img src="capstone_24_3.jpg" alt="Results & Takeaways" class="w-full md:w-1/2 rounded-lg" />
+          <div class="md:w-1/2">
+            <h4 class="font-semibold mb-2">Results & Takeaways</h4>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>Achieved ±0.05°C steady-state accuracy</li>
+              <li>Delivered a fully functional, lab-ready system under $1,200</li>
+              <li>Selected as the top design out of 20+ teams in the 2025 Capstone Showcase</li>
+            </ul>
+            <p class="mt-4">This project strengthened our capabilities in thermal system design, CFD modeling, embedded control, and hands-on fabrication—highlighting the value of user-centered thinking and creative problem-solving under constraints.</p>
+          </div>
         </div>
       </div>
     </div>
