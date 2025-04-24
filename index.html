@@ -163,7 +163,7 @@
       <div class="space-y-6">
         <!-- Background -->
         <div class="flex flex-col md:flex-row items-center gap-6">
-          <img src="test_rig_1_2.jpeg" alt="Background" class="w-full md:w-1/2 rounded-lg" />
+          <img src="test_rig_5_1.jpeg" alt="Background" class="w-full md:w-1/2 rounded-lg" />
           <div class="md:w-1/2">
             <h4 class="font-semibold mb-2">Background</h4>
             <p>This project was completed in collaboration with Accent Refrigeration to support design optimization of their snow-melting coil systems used in ice arena snow pits. The team was tasked with developing a test rig capable of measuring the heat transfer performance of submerged copper coil heat exchangers under real-world conditions.</p>
@@ -218,25 +218,57 @@
       <button onclick="toggleModal('modal3')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">&times;</button>
       <h3 class="text-2xl font-semibold accent-indigo mb-4">CFD/FEA Bike Frame Optimization</h3>
       <div class="space-y-6">
+        <!-- Background -->
         <div class="flex flex-col md:flex-row items-center gap-6">
-          <img src="bike1.jpg" alt="" class="w-full md:w-1/2 rounded-lg" />
-          <p class="text-gray-700 md:w-1/2">Modeled Apollo Volare frame in Siemens NX, performed steady-state CFD at 40 km/h and crosswind angles to map drag coefficients, identifying low-pressure wake zones. (MECH 410)</p>
+          <img src="bike_frame_0_1.png" alt="Background" class="w-full md:w-1/2 rounded-lg" />
+          <div class="md:w-1/2">
+            <h4 class="font-semibold mb-2">Background</h4>
+            <p>This project aimed to aerodynamically and structurally optimize the frame of an Apollo Volare performance road bike using advanced FEA and CFD techniques. Targeted at competitive cyclists, the design focused on reducing aerodynamic drag while ensuring structural reliability under realistic loading, including crosswind exposure.</p>
+          </div>
         </div>
+        <!-- Objectives -->
         <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
-          <img src="bike2.jpg" alt="" class="w-full md:w-1/2 rounded-lg" />
-          <p class="text-gray-700 md:w-1/2">Iterated geometry to elliptical and teardrop profiles, reducing drag by 30% while maintaining structural integrity via static FEA under rider weight loads.</p>
+          <img src="bike_frame_0_2.png" alt="Objectives" class="w-full md:w-1/2 rounded-lg" />
+          <div class="md:w-1/2">
+            <h4 class="font-semibold mb-2">Objectives</h4>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>Reduce aerodynamic drag using CFD-guided geometry changes</li>
+	      <li>Maintain structural integrity under rider weight via static FEA</li>
+	      <li>Validate performance across crosswind angles (0°–20°)</li>
+	      <li>Preserve OEM compatibility while enabling high-performance upgrades and manufacturability</li>
+            </ul>
+          </div>
         </div>
+        <!-- Engineering Approach -->
         <div class="flex flex-col md:flex-row items-center gap-6">
-          <img src="bike3.jpg" alt="" class="w-full md:w-1/2 rounded-lg" />
-          <p class="text-gray-700 md:w-1/2">Validated FEA stress results for max stress <incomplete> tension concentration, ensuring OEM mounting points remained compatible. Converged mesh at 12 mm for efficiency.</p>
+          <img src="bike_frame_0_3.png" alt="Engineering Approach" class="w-full md:w-1/2 rounded-lg" />
+          <div class="md:w-1/2">
+            <h4 class="font-semibold mb-2">Engineering Approach</h4>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>Conducted baseline FEA and CFD using mesh convergence to assess stress concentrations under distributed loads</li>
+              <li>Performed steady and transient CFD simulations at 40 km/h with 4 wind angles using a Realizable k-ε turbulence model</li>
+              <li>Iteratively transitioned from circular to elliptical (4.5:1) and teardrop profiles to reduce flow separation and wake drag</li>
+              <li>Performed crosswind analysis at yaw angles of 10°, 15°, and 20°</li>
+              <li>Optimized mesh refinement around high-gradient regions to balance simulation fidelity and runtime</li>
+            </ul>
+          </div>
         </div>
+        <!-- Results & Takeaways -->
         <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
-          <img src="bike4.jpg" alt="" class="w-full md:w-1/2 rounded-lg" />      
-          <p class="text-gray-700 md:w-1/2">Transient CFD confirmed steady-state findings, delivering a high-fidelity aerodynamic solution for performance-focused cyclists valuing incremental gains.</p>
+          <img src="bike_frame_25_1.png" alt="Results & Takeaways" class="w-full md:w-1/2 rounded-lg" />
+          <div class="md:w-1/2">
+            <h4 class="font-semibold mb-2">Results & Takeaways</h4>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>Achieved a 31% reduction in drag coefficient (1.4 → 0.97) through aerodynamic re-shaping</li>
+              <li>Final design retained low frame stress levels well below yield, despite thinner cross-section</li>
+              <li>Crosswind testing showed up to 50% reduction in drag force compared to the baseline under 10–20° yaw angles</li>
+	    </ul>
+            <p class="mt-4">This project sharpened our ability to integrate FEA and CFD for real-world optimization. It reinforced the importance of turbulence modeling, mesh strategy, and geometry iteration in pushing performance without compromising structural integrity.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </div>	
   <!-- Modal 4 -->
   <div id="modal4" class="modal">
     <div class="bg-white rounded-lg shadow-lg max-w-2xl w-full p-6 relative overflow-auto max-h-[90vh]">
