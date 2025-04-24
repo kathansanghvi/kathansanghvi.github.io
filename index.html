@@ -109,5 +109,134 @@
       modal.classList.toggle("hidden");
     }
   </script>
+
+<!-- Project Modals -->
+<!-- Capstone Modal -->
+<div id="capstoneModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
+    <button onclick="toggleModal('capstoneModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
+    <h3 class="text-2xl font-semibold mb-4">Recirculating Water Bath (Capstone Project)</h3>
+    <img src="capstone.jpg" alt="Capstone" class="w-full h-40 object-cover rounded mb-4">
+    <h4 class="font-semibold mb-1">Background</h4>
+    <p class="mb-3">Developed for UVic’s thermal engineering labs to support biomedical experiments requiring ±0.1°C precision, replacing costly commercial baths.</p>
+    <h4 class="font-semibold mb-1">Objectives</h4>
+    <p class="mb-3">Build a self-contained water bath with stainless steel tank, PI-controlled heating, and internal recirculation to maintain ±0.1°C accuracy from ambient to 95°C.</p>
+    <h4 class="font-semibold mb-1">Design & Engineering Approach</h4>
+    <p class="mb-3">CAD and CFD in Siemens NX refined inlet/outlet geometry for uniform flow. Custom Arduino-based PI control tuned to ±0.05°C. Stainless steel fabrication with TIG welding.</p>
+    <h4 class="font-semibold mb-1">Challenges</h4>
+    <p class="mb-3">Preventing thermal stratification, tuning PI controller to avoid wind-up, and ensuring weld integrity with effective insulation.</p>
+    <h4 class="font-semibold mb-1">Results</h4>
+    <p class="mb-3">Achieved ±0.05°C stability over 1 hour. Validated via IR scans and manual sampling. Awarded Marianne Black Award for Best Design 2025.</p>
+  </div>
+</div>
+<!-- Test Rig Modal -->
+<div id="testRigModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
+    <button onclick="toggleModal('testRigModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
+    <h3 class="text-2xl font-semibold mb-4">Heat Transfer Test Rig (Accent Refrigeration)</h3>
+    <img src="test_rig.jpg" alt="Test Rig" class="w-full h-40 object-cover rounded mb-4">
+    <h4 class="font-semibold mb-1">Background</h4>
+    <p class="mb-3">Built with Accent Refrigeration to measure heat transfer coefficients in copper coils submerged in ice water, simulating refrigeration systems.</p>
+    <h4 class="font-semibold mb-1">Objectives</h4>
+    <p class="mb-3">Deliver a test loop with calibrated RTDs, flow/pressure sensors, and DAQ readiness for accurate HTC measurement at 5–10 GPM.</p>
+    <h4 class="font-semibold mb-1">Design & Engineering Approach</h4>
+    <p class="mb-3">Integrated 1 HP pump, 40 kW heater, inline flow meters, pressure transducers, and agitator. P&ID and isometric layouts guided fabrication.</p>
+    <h4 class="font-semibold mb-1">Challenges</h4>
+    <p class="mb-3">Maintaining bath uniformity under variable loads, sensor calibration, and preventing stratification without compromising access.</p>
+    <h4 class="font-semibold mb-1">Results</h4>
+    <p class="mb-3">Rig validated with repeatable data matching theoretical HTC. Adopted by Accent Refrigeration for design refinements.</p>
+  </div>
+</div>
+<!-- VTOL Modal -->
+<div id="vtolModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
+    <button onclick="toggleModal('vtolModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
+    <h3 class="text-2xl font-semibold mb-4">Hybrid Tilt-Wing VTOL Aircraft</h3>
+    <img src="vtol.jpg" alt="VTOL" class="w-full h-40 object-cover rounded mb-4">
+    <h4 class="font-semibold mb-1">Background</h4>
+    <p class="mb-3">Concept for BC Wildfire Service, enabling runway-independent transport of crews to remote wildfire zones.</p>
+    <h4 class="font-semibold mb-1">Objectives</h4>
+    <p class="mb-3">Design a 10-passenger hybrid-electric tilt-wing for VTOL and efficient cruise, balancing range, payload, and speed.</p>
+    <h4 class="font-semibold mb-1">Design & Engineering Approach</h4>
+    <p class="mb-3">AHP used to select tilt-wing. CAD in SolidWorks; aerodynamic sizing via XFLR5; hybrid propulsion via mass/balance ADT inputs.</p>
+    <h4 class="font-semibold mb-1">Challenges</h4>
+    <p class="mb-3">Transition stability between hover and cruise, weight distribution of batteries vs engine.</p>
+    <h4 class="font-semibold mb-1">Results</h4>
+    <p class="mb-3">Final design met operational requirements; complete design package delivered to stakeholders.</p>
+  </div>
+</div>
+<!-- Bike Frame Modal -->
+<div id="bikeFrameModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
+    <button onclick="toggleModal('bikeFrameModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
+    <h3 class="text-2xl font-semibold mb-4">CFD/FEA Road Bike Frame</h3>
+    <img src="bike_frame.jpg" alt="Bike Frame" class="w-full h-40 object-cover rounded mb-4">
+    <h4 class="font-semibold mb-1">Background</h4>
+    <p class="mb-3">Optimized a road bike frame for competitive cycling, targeting aerodynamic improvement without losing structural integrity.</p>
+    <h4 class="font-semibold mb-1">Objectives</h4>
+    <p class="mb-3">Reduce drag by 30% and ensure stresses under rider loading stay below yield limits.</p>
+    <h4 class="font-semibold mb-1">Design & Engineering Approach</h4>
+    <p class="mb-3">Siemens NX CFD with Realizable k-ε; FEA under static loads (seat, handlebar, pedal); iterative geometry refinement to elliptical/teardrop profiles.</p>
+    <h4 class="font-semibold mb-1">Challenges</h4>
+    <p class="mb-3">Balancing aerodynamic shapes with manufacturability and rider ergonomics.</p>
+    <h4 class="font-semibold mb-1">Results</h4>
+    <p class="mb-3">30% drag reduction confirmed; maximum stress < 25 MPa, ready for prototype fabrication.</p>
+  </div>
+</div>
+<!-- HVAC Modal -->
+<div id="hvacModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
+    <button onclick="toggleModal('hvacModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
+    <h3 class="text-2xl font-semibold mb-4">Geothermal HVAC Modeling</h3>
+    <img src="hvac.jpg" alt="HVAC" class="w-full h-40 object-cover rounded mb-4">
+    <h4 class="font-semibold mb-1">Background</h4>
+    <p class="mb-3">Modeled HVAC for a grocery site on geothermal district heating to reduce energy use and carbon footprint.</p>
+    <h4 class="font-semibold mb-1">Objectives</h4>
+    <p class="mb-3">Optimize duct layout, insulation, and equipment to achieve 20–30% EUI reduction over baseline.</p>
+    <h4 class="font-semibold mb-1">Design & Engineering Approach</h4>
+    <p class="mb-3">Used eQUEST and psychrometric analysis for load profiles; ASHRAE-compliant zonal diffusers; green roof integration for summer cooling.</p>
+    <h4 class="font-semibold mb-1">Challenges</h4>
+    <p class="mb-3">Coordinating complex duct routing within existing structural constraints and minimizing infiltration.</p>
+    <h4 class="font-semibold mb-1">Results</h4>
+    <p class="mb-3">Design met comfort and performance goals; validated for geothermal system integration.</p>
+  </div>
+</div>
+<!-- Mold Modal -->
+<div id="moldModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
+    <button onclick="toggleModal('moldModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
+    <h3 class="text-2xl font-semibold mb-4">CNC Mold Design</h3>
+    <img src="mold.jpg" alt="Mold" class="w-full h-40 object-cover rounded mb-4">
+    <h4 class="font-semibold mb-1">Background</h4>
+    <p class="mb-3">CNC-machined HDPE mold for bicycle pedal in a manufacturing course, evaluating toolpath impacts on finish and time.</p>
+    <h4 class="font-semibold mb-1">Objectives</h4>
+    <p class="mb-3">Compare CAM strategies (scallop, raster, hybrid) to balance surface quality and cycle time.</p>
+    <h4 class="font-semibold mb-1">Design & Engineering Approach</h4>
+    <p class="mb-3">Mastercam toolpaths validated in Vericut; machined on Tormach mill; varied stepover, RPM, and tool sizes.</p>
+    <h4 class="font-semibold mb-1">Challenges</h4>
+    <p class="mb-3">Managing HDPE chip welding and tool wear in tight radii.</p>
+    <h4 class="font-semibold mb-1">Results</h4>
+    <p class="mb-3">Produced molds with distinct finish profiles; documented best practices for rapid mold production.</p>
+  </div>
+</div>
+<!-- Pipeline Modal -->
+<div id="pipelineModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-lg">
+    <button onclick="toggleModal('pipelineModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
+    <h3 class="text-2xl font-semibold mb-4">CO₂ Pipeline Analysis</h3>
+    <img src="co2_pipeline.jpg" alt="CO2 Pipeline" class="w-full h-40 object-cover rounded mb-4">
+    <h4 class="font-semibold mb-1">Background</h4>
+    <p class="mb-3">Techno-economic modeling for long-haul CO₂ transport from capture sites to sequestration, assessing costs and exergy losses.</p>
+    <h4 class="font-semibold mb-1">Objectives</h4>
+    <p class="mb-3">Determine optimal pipeline diameter, pressure, and booster spacing to minimize lifetime cost and energy loss.</p>
+    <h4 class="font-semibold mb-1">Design & Engineering Approach</h4>
+    <p class="mb-3">Excel & EES used for real-fluid properties; NPV/IRR over 30 years; 500 km scenario with 3 booster stations.</p>
+    <h4 class="font-semibold mb-1">Challenges</p>
+    <p class="mb-3">Ensuring supercritical phase stability over elevation changes and cost assumptions under market variability.</p>
+    <h4 class="font-semibold mb-1">Results</p>
+    <p class="mb-3">Proposed cost-effective design with >90% exergy retention and positive economic metrics for 30-year operation.</p>
+  </div>
+</div>
+
 </body>
 </html>
