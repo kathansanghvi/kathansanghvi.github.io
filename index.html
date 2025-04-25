@@ -6,32 +6,13 @@
   <title>Kathan Sanghvi | Mechanical Engineering Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* make #home a positioning context */
-    #home {
-      position: relative;
-      overflow: hidden;
-    }
-    /* the translucent bg layer */
-    #home::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url('./Info_wallpaper.jpg') center/cover no-repeat;
-      opacity: 0.2;
-      z-index: 0;
-    }
-    /* ensure your content rides above the bg */
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .accent-navy { color: rgba(15, 23, 42, 1); }
-    .accent-indigo { color: rgba(79, 70, 229, 1); }
+    .accent-navy { --tw-text-opacity: 1; color: rgba(15, 23, 42, var(--tw-text-opacity)); }
+    .accent-indigo { --tw-text-opacity: 1; color: rgba(79, 70, 229, var(--tw-text-opacity)); }
+    .modal { display: none; position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,0.6); align-items: center; justify-content: center; }
+    .modal-active { display: flex; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-
   <!-- Hero -->
   <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center px-4">
     <img src="path/to/photo.jpg" alt="Kathan Sanghvi" class="w-32 h-32 rounded-full mb-4 border-4 border-indigo-500" />
