@@ -23,8 +23,8 @@
       class="absolute inset-0 bg-[url('Intro_wallpaper.JPG')] bg-cover bg-center opacity-20 -z-10"
 ></div>
     <img src="path/to/photo.jpg" alt="Kathan Sanghvi" class="w-64 h-64 rounded-full mb-4 border-4 border-indigo-500" />
-      <h1 class="text-4xl font-bold accent-navy mb-2">Kathan Sanghvi</h1>
     <div class="bg-white bg-opacity-60 p-4 rounded-lg">
+      <h1 class="text-4xl font-bold accent-navy mb-2">Kathan Sanghvi</h1>
       <p class="text-xl text-gray-800 mb-1">B.Eng. Mechanical Engineering, University of Victoria</p>
       <p class="text-lg text-gray-700">Specializations: Energy Systems & Thermo-fluids/Aerodynamics</p>
     </div>
@@ -456,9 +456,25 @@
     function toggleModal(id) {
       document.getElementById(id).classList.toggle('modal-active');
     }
+
+    // open buttons
     document.querySelectorAll('[data-modal-target]').forEach(btn => {
       btn.addEventListener('click', () => {
         toggleModal(btn.getAttribute('data-modal-target'));
+      });
+    });
+
+    // close buttons (×)
+    // (you already have inline onclicks on each close button)
+
+    // NEW: close when clicking on the backdrop
+    document.querySelectorAll('.modal').forEach(modal => {
+      modal.addEventListener('click', e => {
+        // only close if the click was directly on the overlay, 
+        // not inside the white content box
+        if (e.target === modal) {
+          toggleModal(modal.id);
+        }
       });
     });
   </script>
