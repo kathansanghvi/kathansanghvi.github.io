@@ -55,21 +55,13 @@
 
 
 <!-- Entrepreneurial Co-op Executive Summary -->
-  <section id="coop-summary" class="py-16 px-4 bg-white">
+  <section id="coop-summary" class="$1bg-gray-100$2">>
     <div class="max-w-5xl mx-auto flex flex-col lg:flex-row items-center">
-      <div class="lg:w-2/3 text-left">
-        <h2 class="text-3xl font-semibold accent-navy mb-4">Entrepreneurial Co-op</h2>
+      <div class="lg:w-2/3 text-center">
+        <h2 class="text-3xl font-semibold accent-navy mb-2">Entrepreneurial Co-op Summary</h2>
+        <h3 class="text-xl font-medium text-gray-600 mb-6">Autonomous Solar Panel Cleaning and Cooling Solution</h3>
         <p class="text-lg text-gray-700 mb-4">
-          Engineered an autonomous, closed-loop system combining solar panel cleaning and evaporative cooling to recover lost efficiency, extend panel lifespan, and slash residential solar payback periods.
-        </p>
-        <p class="text-lg text-gray-700 mb-4">
-          Built full-system thermal models in MATLAB, optimized mechanical design in SolidWorks, and validated performance through year-long simulations and cost modeling.
-        </p>
-        <p class="text-lg text-gray-700 mb-4">
-          Achieved a ~40% faster payback period, with material costs between USD ~$2,870–$4,205, positioning the solution for deployment in hot, high-soiling markets.
-        </p>
-        <p class="text-lg text-gray-700 mb-4">
-          Future development will integrate advanced heat exchanger cooling, unlocking additional water savings and expanding regional viability.
+          Solar panels can lose up to 30% of their output annually from dirt buildup and suffer an additional ~0.5% efficiency loss per °C due to overheating — yet most residential systems lack practical solutions to address it. This project developed an automated cleaning and cooling system using gravity-fed flow, off-peak water pumping, and adaptive control to recover lost efficiency while minimizing water and energy use. Designed for easy retrofitting onto typical two-story rooftops, the system improves energy production and delivers shorter payback periods—bringing solar returns closer to what homeowners expect when they install their systems.
         </p>
       </div>
       <div class="lg:w-1/3 mt-8 lg:mt-0 lg:pl-8">
@@ -141,66 +133,85 @@
 
   <!-- Modals -->
 
-	<!-- Co-op Modal -->
+	 <!-- Co-op Modal -->
   <div id="coopModal" class="modal">
     <div class="bg-white rounded-lg shadow-lg w-3/4 mx-auto p-6 relative overflow-auto max-h-[90vh]">
       <button onclick="toggleModal('coopModal')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">&times;</button>
-      <h3 class="text-2xl font-semibold accent-indigo mb-4">Entrepreneurial Co-op Details</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
-        <!-- Left Column -->
+      <h3 class="text-2xl font-semibold accent-indigo mb-4">Entrepreneurial Co-op</h3>
+      <div class="space-y-6">
+        <!-- Overview -->
         <div>
-          <h4 class="font-semibold mb-2">Background</h4>
-          <p class="text-gray-700 mb-4">Residential solar panel installations face two key efficiency losses: soiling and overheating. Manual cleaning is infrequent, often water-intensive, and ineffective—while rising panel temperatures can reduce efficiency by up to 0.5% per °C. This project focused on designing an automated, water-based system that integrates cleaning and evaporative cooling to minimize energy losses, conserve resources, and shorten payback periods—particularly in hot, arid markets like Los Angeles.</p>
-          <h4 class="font-semibold mb-2">Objectives</h4>
-          <ul class="list-disc pl-5 text-gray-700 mb-4">
-            <li>Minimize soiling losses through automated, low-water cleaning</li>
-            <li>Reduce overheating losses using evaporative cooling methods</li>
-            <li>Evaluate economic feasibility through payback analysis</li>
-            <li>Design a modular, retrofit-friendly system for angled residential rooftops</li>
-          </ul>
-          <h4 class="font-semibold mb-2">Concept Development</h4>
-          <p class="text-gray-700 mb-4">Initial concepts explored both air- and water-based approaches. After technical and economic evaluation, a closed-loop water-based cleaning and evaporative cooling system was selected for its simplicity and efficiency. A turbine for energy recovery was initially considered but eliminated due to negligible energy gains and maintenance concerns. A heat exchanger-based cooling system is planned as a future enhancement for regions where water conservation is critical.</p>
-          <h4 class="font-semibold mb-2">Modeling & Simulation</h4>
-          <ul class="list-disc pl-5 text-gray-700 mb-4">
-            <li>Developed MATLAB scripts to model hourly solar panel surface temperatures based on convection, radiation, and solar irradiance data.</li>
-            <li>Sourced annual irradiance and ambient temperature datasets (Los Angeles, NSRDB) for full-year simulations.</li>
-            <li>Applied Newton-Raphson iteration for solving non-linear heat transfer equations, ensuring accurate thermal behavior modeling.</li>
-            <li>Determined pump sizing by filtering out peak outliers and using IQR bounds to optimize mass flow rate and energy use.</li>
-          </ul>
+          <img src="placeholder.jpg" alt="Overview" class="w-full h-40 object-cover rounded-lg mb-2">
+          <h4 class="font-semibold mb-2">Overview</h4>
+          <p class="text-gray-700 mb-2">Soiling and overheating cause major solar efficiency losses—up to 30% annual reduction from dirt accumulation and ~0.5% efficiency loss per °C of overheating.</p>
+          <p class="text-gray-700">This project developed an automated cleaning and cooling system to recover lost efficiency, minimize operational costs, and shorten payback periods. The system integrates gravity-fed daytime operation, TOU-optimized refilling, and modular retrofitting for residential rooftops, targeting deployment in hot, arid regions like Los Angeles.</p>
         </div>
-        <!-- Right Column -->
-        <div>
-          <h4 class="font-semibold mb-2">Control Strategy</h4>
-          <p class="text-gray-700 mb-4">Designed a shared upper/lower reservoir system to streamline water distribution for both cleaning and cooling operations. Implemented valve sequencing with time delays to minimize water wastage and extend filter life. Optimized operations around Time-of-Use (TOU) electricity pricing to further reduce running costs.</p>
-          <h4 class="font-semibold mb-2">Mechanical Design</h4>
-          <ul class="list-disc pl-5 text-gray-700 mb-4">
-            <li>Created a full 3D SolidWorks model of a two-story angled-roof residential house to simulate real-world installation challenges</li>
-            <li>Concealed upper reservoir within a chimney-style façade for aesthetics</li>
-            <li>Sprinkler layout for uniform panel cleaning and evaporative cooling</li>
-            <li>Modular piping network and filtration units</li>
-            <li>Placeholder heat exchanger for future closed-loop cooling integration</li>
-            <li>Focused on minimizing visual intrusion, maximizing modularity, and addressing structural safety for rooftop loads</li>
-          </ul>
-          <h4 class="font-semibold mb-2">Cost & Payback Analysis</h4>
-          <ul class="list-disc pl-5 text-gray-700 mb-4">
-            <li>Estimated material cost: USD ~$2,870–$4,205 (converted from CAD $3,837–$5,623) depending on configuration</li>
-            <li>Annual electricity savings: Up to USD ~$785 compared to no cleaning/cooling system</li>
-            <li>Discounted payback period (5% interest rate): 5.86 years (cleaning + evaporative cooling), 7.07 years (cleaning only), 9.68 years (no intervention)</li>
-          </ul>
-          <h4 class="font-semibold mb-2">Results & Takeaways</h4>
-          <ul class="list-disc pl-5 text-gray-700 mb-4">
-            <li>Integrated cleaning and evaporative cooling reduced solar system payback periods by ~40%</li>
-            <li>Average cooling pump energy use was minimal (~0.025 kWh/day), preserving system net gains</li>
-            <li>Thermal analysis identified limitations late in the day when reservoir water overheats—highlighting the future value of enhanced heat exchanger designs</li>
-            <li>Modular system architecture allows for customer-specific configurations (cleaning-only, cooling-only, or both), enhancing market adaptability</li>
-            <li>Key challenges include structural reinforcement for rooftop reservoirs, long-term maintenance of valves and filters, and integrating future cooling enhancements without disrupting core system performance</li>
-          </ul>
+        <!-- Grid for other sections -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- System Architecture -->
+          <div>
+            <img src="placeholder.jpg" alt="System Architecture" class="w-full h-40 object-cover rounded-lg mb-2">
+            <h4 class="font-semibold mb-2">System Architecture</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Gravity-fed rooftop reservoir: Positioned above the panels, preloaded during low Time-of-Use (TOU) electricity periods to enable daytime cleaning and cooling without active pumping.</li>
+              <li>Facade-integrated design: The elevated tank is enclosed within a chimney-style façade to maintain residential aesthetics while supporting functional performance.</li>
+              <li>SolidWorks structural modeling: Captured full integration with two-story, angled-roof homes, ensuring realistic retrofitting and structural feasibility.</li>
+              <li>Water-efficient operation: Cleaning cycles use precisely scheduled, controlled volumes to minimize waste while maintaining effective panel coverage.</li>
+              <li>Shared piping network: A common upper reservoir supplies both cleaning and cooling through a simplified valve and piping system to optimize material use.</li>
+            </ul>
+          </div>
+          <!-- Control System -->
+          <div>
+            <img src="placeholder.jpg" alt="Control System" class="w-full h-40 object-cover rounded-lg mb-2">
+            <h4 class="font-semibold mb-2">Control System</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Microcontroller-based automation: Coordinates pump scheduling, valve sequencing, and reservoir monitoring for efficient system operation.</li>
+              <li>TOU-aware control algorithms: Prioritize off-peak pumping and gravity-driven daytime operation to minimize energy costs.</li>
+              <li>Adaptive cleaning schedules: Adjust cleaning frequency seasonally based on soiling rates for water conservation and maximum performance.</li>
+              <li>Delay-based filtration: Drains the dirtiest initial runoff separately before filtering and returning water to the lower reservoir, extending filter life.</li>
+              <li>Built-in reliability features: Include dry-run pump protection, low-reservoir alarms, and an optional rapid-drain function to empty the overhead tank during high-wind events to protect rooftop structures.</li>
+            </ul>
+          </div>
+          <!-- Modeling & Performance Validation -->
+          <div>
+            <img src="placeholder.jpg" alt="Modeling & Performance Validation" class="w-full h-40 object-cover rounded-lg mb-2">
+            <h4 class="font-semibold mb-2">Modeling & Performance Validation</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Thermal simulation: Built MATLAB models solving non-linear radiative and convective heat balances via Newton-Raphson iteration to predict panel temperatures.</li>
+              <li>Annual system modeling: Simulated 8760 hours of operation using Los Angeles NSRDB weather data for a 5 kW rooftop system, modeling cooling impact, reservoir heating, and seasonal performance.</li>
+              <li>Pump and flow optimization: Applied interquartile range (IQR) filtering to right-size pumps for daily operation without oversizing for rare extreme conditions.</li>
+              <li>Reservoir thermal behavior: Modeled daytime water heating to optimize cleaning and cooling schedules based on evolving system efficiency.</li>
+            </ul>
+          </div>
+          <!-- Cost and Economic Analysis -->
+          <div>
+            <img src="placeholder.jpg" alt="Cost and Economic Analysis" class="w-full h-40 object-cover rounded-lg mb-2">
+            <h4 class="font-semibold mb-2">Cost and Economic Analysis</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Material cost estimate: USD ~$2,870–$4,205 (converted from CAD $3,837–$5,623), depending on system configuration.</li>
+              <li>Annual electricity savings: Up to USD ~$785 compared to unmanaged arrays.</li>
+              <li>Discounted payback periods (5% discount rate):
+                <ul class="list-disc pl-5">
+                  <li>5.86 years (cleaning and cooling)</li>
+                  <li>7.07 years (cleaning only)</li>
+                  <li>9.68 years (no intervention)</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- Key Outcomes -->
+          <div>
+            <img src="placeholder.jpg" alt="Key Outcomes" class="w-full h-40 object-cover rounded-lg mb-2">
+            <h4 class="font-semibold mb-2">Key Outcomes</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Recovered ~40% of lost solar efficiency through integrated cleaning and cooling.</li>
+              <li>Achieved low operational energy use (~0.025 kWh/day) via passive flow and TOU-based optimization.</li>
+              <li>Delivered a modular, scalable system adaptable to different rooftops and climates.</li>
+              <li>Validated system feasibility and return on investment through full-year thermal, flow, and cost modeling.</li>
+              <li>Future refinement will focus on heat exchanger optimization to further enhance cooling performance.</li>
+            </ul>
+          </div>
         </div>
-        <!-- Scattered Images -->
-        <img src="placeholder1.jpg" alt="Decorative" class="absolute top-16 left-16 w-32 h-32 object-cover rounded-lg">
-        <img src="placeholder2.jpg" alt="Decorative" class="absolute top-16 right-16 w-32 h-32 object-cover rounded-lg">
-        <img src="placeholder3.jpg" alt="Decorative" class="absolute bottom-16 left-20 w-32 h-32 object-cover rounded-lg">
-        <img src="placeholder4.jpg" alt="Decorative" class="absolute bottom-16 right-20 w-32 h-32 object-cover rounded-lg">
       </div>
     </div>
   </div>
