@@ -91,7 +91,7 @@
         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
           <img src="test_rig_11_1.jpeg" alt="Heat Transfer coefficient Test Rig" class="w-full h-48 object-cover" />
           <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">Heat Transfer Test Rig</h3>
+            <h3 class="text-xl font-semibold mb-2">Heat Transfer Coefficient Test Rig</h3>
             <button data-modal-target="modal2" class="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600 transition">Learn More</button>
           </div>
         </div>
@@ -138,7 +138,7 @@
   <div class="bg-white rounded-lg shadow-lg w-1/2 mx-auto p-6 relative overflow-auto max-h-[90vh]">
     <button onclick="toggleModal('coopModal')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">&times;</button>
     <h3 class="text-2xl font-semibold accent-indigo mb-4">Entrepreneurial Co-op - Autonomous Solar Panel Cleaning & Cooling Solution</h3>
-	<h4 class="text-base italic text-gray-600 mb-6">Mentored by: Dr. Andre Rowe, Acting Director, Institute for Integrated Energy Systems</h4>
+	<h4 class="text-base italic text-gray-600 mb-6">Mentored by: Dr. Andrew Rowe, Acting Director, Institute for Integrated Energy Systems</h4>
 	<br>
          <!-- Overview -->
       <div>
@@ -284,7 +284,7 @@
   <div id="modal2" class="modal">
     <div class="bg-white rounded-lg shadow-lg max-w-2xl w-full p-6 relative overflow-auto max-h-[90vh]">
       <button onclick="toggleModal('modal2')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">&times;</button>
-      <h3 class="text-2xl font-semibold accent-indigo mb-4">Heat Transfer coefficient Test Rig - Accent Refrigeration Systems Ltd.</h3>
+      <h3 class="text-2xl font-semibold accent-indigo mb-4">Heat Transfer Coefficient Test Rig - Accent Refrigeration Systems Ltd.</h3>
       <div class="space-y-6">
         <!-- Background -->
         <div class="flex flex-col md:flex-row items-center gap-6">
@@ -444,7 +444,7 @@
               <li>Program #4 (Equal scallop finish, post-drilled holes) resulted in rougher surfaces and reduced cut accuracy due to missed geometry and angled drilling</li>
               <li>Completed machining of both molds within a 90-minute shop floor window, including tool changes and setup</li>
 	    </ul>
-            <p class="mt-4">This project sharpened my ability to integrate FEA and CFD for real-world optimization. It reinforced the importance of turbulence modeling, mesh strategy, and geometry iteration in pushing performance without compromising structural integrity.</p>
+            <p class="mt-4">This project provided hands-on experience in toolpath optimization, CAM verification, and precision machining. It demonstrated the critical link between simulation accuracy and real-world output, reinforcing our ability to engineer for quality, efficiency, and manufacturability under time pressure.</p>
           </div>
         </div>
       </div>
@@ -590,5 +590,19 @@
       });
     });
   </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('#coopModal li').forEach(li => {
+      const colonIndex = li.innerHTML.indexOf(':');
+      if (colonIndex > 0) {
+        const before = li.innerHTML.slice(0, colonIndex);
+        const after = li.innerHTML.slice(colonIndex);
+        li.innerHTML = `<strong>${before}</strong>${after}`;
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
