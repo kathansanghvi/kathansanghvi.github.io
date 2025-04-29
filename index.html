@@ -134,7 +134,7 @@
   <!-- Modals -->
 
 	<div id="coopModal" class="modal">
-  <div class="bg-white rounded-lg shadow-lg w-11/12 lg:w-3/4 mx-auto p-6 relative overflow-auto max-h-[90vh]">
+  <div class="bg-white rounded-lg shadow-lg w-11/12 lg:w-5/6 mx-auto p-6 relative overflow-auto max-h-[90vh]">
     <button onclick="toggleModal('coopModal')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">&times;</button>
     <h3 class="text-2xl font-semibold accent-indigo mb-4">Entrepreneurial Co-op - Autonomous Solar Panel Cleaning & Cooling Solution</h3>
     <h4 class="text-base italic text-gray-600 mb-6">Mentored by: Dr. Andrew Rowe, Acting Director, Institute for Integrated Energy Systems</h4>
@@ -223,11 +223,11 @@
         <div class="md:w-3/4">
           <h4 class="text-lg font-semibold mb-2">Key Outcomes</h4>
           <ul class="list-disc pl-5 text-gray-700">
-            <li><strong>Recovered</strong> ~40% of lost solar efficiency through integrated cleaning and cooling.</li>
-            <li><strong>Achieved</strong> low operational energy use (~0.025 kWh/day) via passive flow and TOU-based optimization.</li>
-            <li><strong>Delivered</strong> a modular, scalable system adaptable to different rooftops and climates.</li>
-            <li><strong>Validated</strong> system feasibility and return on investment through full-year thermal, flow, and cost modeling.</li>
-            <li><strong>Future refinement</strong> will focus on heat exchanger optimization to further enhance cooling performance.</li>
+            <li>Recovered ~40% of lost solar efficiency through integrated cleaning and cooling.</li>
+            <li>Achieved low operational energy use (~0.025 kWh/day) via passive flow and TOU-based optimization.</li>
+            <li>Delivered a modular, scalable system adaptable to different rooftops and climates.</li>
+            <li>Validated system feasibility and return on investment through full-year thermal, flow, and cost modeling.</li>
+            <li>Future refinement will focus on heat exchanger optimization to further enhance cooling performance.</li>
           </ul>
         </div>
         <div class="md:w-1/4">
@@ -609,19 +609,6 @@
       });
     });
   </script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('#coopModal li').forEach(li => {
-      const colonIndex = li.innerHTML.indexOf(':');
-      if (colonIndex > 0) {
-        const before = li.innerHTML.slice(0, colonIndex);
-        const after = li.innerHTML.slice(colonIndex);
-        li.innerHTML = `<strong>${before}</strong>${after}`;
-      }
-    });
-  });
-</script>
 
 </body>
 </html>
